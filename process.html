@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Process | Cognora Technologies</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#0f172a', // Deep Slate
+                        },
+                        accent: '#06b6d4', // Cyan
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(37, 99, 235, 0.15)',
+                        'card': '0 10px 30px -5px rgba(0, 0, 0, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        /* Grid Pattern */
+        .bg-grid-pattern {
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        /* Timeline Line */
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e2e8f0;
+            z-index: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline-line::before {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans text-slate-600 antialiased overflow-x-hidden selection:bg-brand-600 selection:text-white">
+
+    <div id="scrollProgress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-600 to-accent z-[100] w-0 transition-all duration-200"></div>
+
+    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-transparent">
+        <nav class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-105 transition-transform">
+                    C
+                </div>
+                <span class="font-heading font-bold text-2xl text-brand-900">
+                    Cognora<span class="text-brand-600">Tech</span>
+                </span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Home</a>
+                <a href="about.html" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">About</a>
+                <a href="services.html" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Services</a>
+                <a href="process.html" class="text-sm font-medium text-brand-600 font-bold transition-colors">Process</a>
+                <a href="contact.html" class="px-5 py-2.5 bg-brand-900 text-white text-sm font-medium rounded-full hover:bg-brand-700 transition-all shadow-lg hover:shadow-brand-500/25">
+                    Contact Us
+                </a>
+            </div>
+
+            <button id="menuBtn" class="md:hidden p-2 text-slate-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+
+        <div id="mobileMenu" class="absolute top-full left-0 w-full bg-white border-b shadow-lg transform -translate-y-[150%] transition-transform duration-300 md:hidden -z-10">
+            <div class="flex flex-col p-6 gap-4 font-medium">
+                <a href="index.html" class="mobile-link">Home</a>
+                <a href="about.html" class="mobile-link">About</a>
+                <a href="services.html" class="mobile-link">Services</a>
+                <a href="process.html" class="mobile-link text-brand-600">Process</a>
+                <a href="contact.html" class="w-full text-center py-3 bg-brand-600 text-white rounded-lg">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative pt-32 pb-20 bg-brand-900 overflow-hidden text-white">
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
+            <h1 class="font-heading text-4xl md:text-5xl font-bold mb-6">
+                From Concept to <span class="text-accent">Code</span>
+            </h1>
+            <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                We follow a structured Agile methodology to ensure transparency, flexibility, and high-quality delivery for every project.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white relative timeline-line">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-24 relative">
+                <div class="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-8 h-8 bg-brand-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+                
+                <div class="text-right md:pr-16 order-1" data-aos="fade-right">
+                    <span class="inline-block px-3 py-1 bg-blue-50 text-brand-600 font-bold rounded-full text-xs mb-3">STEP 01</span>
+                    <h3 class="font-heading text-3xl font-bold text-brand-900 mb-4">Discovery & Strategy</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        We start by understanding your vision, business goals, and target audience. We conduct market research and feasibility studies to define a solid roadmap.
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-2 inline-block text-left">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Requirement Gathering</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Competitor Analysis</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Tech Stack Selection</li>
+                    </ul>
+                </div>
+                <div class="md:pl-16 order-2" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Discovery" class="rounded-2xl shadow-lg border border-slate-100 w-full">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-24 relative">
+                 <div class="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-8 h-8 bg-white border-4 border-brand-600 rounded-full shadow-lg z-10"></div>
+
+                <div class="md:pr-16 order-1 md:order-2 text-left" data-aos="fade-left">
+                    <span class="inline-block px-3 py-1 bg-purple-50 text-purple-600 font-bold rounded-full text-xs mb-3">STEP 02</span>
+                    <h3 class="font-heading text-3xl font-bold text-brand-900 mb-4">UI/UX Design</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        We create wireframes and interactive prototypes to visualize the user journey. Our design focuses on aesthetics, accessibility, and user experience.
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500"></i> Wireframing & Prototyping</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500"></i> Visual Design System</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-purple-500"></i> User Feedback Loop</li>
+                    </ul>
+                </div>
+                <div class="md:pl-16 order-2 md:order-1" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Design" class="rounded-2xl shadow-lg border border-slate-100 w-full">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-24 relative">
+                 <div class="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-8 h-8 bg-brand-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+
+                <div class="text-right md:pr-16 order-1" data-aos="fade-right">
+                    <span class="inline-block px-3 py-1 bg-green-50 text-green-600 font-bold rounded-full text-xs mb-3">STEP 03</span>
+                    <h3 class="font-heading text-3xl font-bold text-brand-900 mb-4">Development</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        Our engineers bring the design to life using clean, scalable code. We follow Agile sprints, ensuring regular updates and flexibility.
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-2 inline-block text-left">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Frontend & Backend Dev</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> API Integration</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-green-500"></i> Database Setup</li>
+                    </ul>
+                </div>
+                <div class="md:pl-16 order-2" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Development" class="rounded-2xl shadow-lg border border-slate-100 w-full">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center mb-24 relative">
+                 <div class="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-8 h-8 bg-white border-4 border-brand-600 rounded-full shadow-lg z-10"></div>
+
+                <div class="md:pr-16 order-1 md:order-2 text-left" data-aos="fade-left">
+                    <span class="inline-block px-3 py-1 bg-orange-50 text-orange-600 font-bold rounded-full text-xs mb-3">STEP 04</span>
+                    <h3 class="font-heading text-3xl font-bold text-brand-900 mb-4">Quality Assurance</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        Rigorous testing to ensure your product is bug-free, secure, and performs well under load. We test across devices and browsers.
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-2">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500"></i> Unit & Integration Testing</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500"></i> Performance Testing</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500"></i> Security Audits</li>
+                    </ul>
+                </div>
+                <div class="md:pl-16 order-2 md:order-1" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Testing" class="rounded-2xl shadow-lg border border-slate-100 w-full">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center relative">
+                 <div class="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-8 h-8 bg-brand-600 rounded-full border-4 border-white shadow-lg z-10"></div>
+
+                <div class="text-right md:pr-16 order-1" data-aos="fade-right">
+                    <span class="inline-block px-3 py-1 bg-cyan-50 text-accent font-bold rounded-full text-xs mb-3">STEP 05</span>
+                    <h3 class="font-heading text-3xl font-bold text-brand-900 mb-4">Deployment & Support</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">
+                        We handle the cloud deployment and ensure a smooth go-live. Post-launch, we provide ongoing maintenance and updates.
+                    </p>
+                    <ul class="text-sm text-slate-500 space-y-2 inline-block text-left">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500"></i> Cloud Setup (AWS/GCP)</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500"></i> Monitoring & Alerts</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-cyan-500"></i> 24/7 Support</li>
+                    </ul>
+                </div>
+                <div class="md:pl-16 order-2" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Deployment" class="rounded-2xl shadow-lg border border-slate-100 w-full">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="font-heading text-2xl font-bold text-slate-800 mb-10">Tools That Power Our Process</h2>
+            <div class="flex flex-wrap justify-center gap-8 text-slate-400">
+                <div class="flex flex-col items-center gap-2"><i class="fab fa-jira text-3xl"></i><span class="text-xs font-semibold">Jira</span></div>
+                <div class="flex flex-col items-center gap-2"><i class="fab fa-slack text-3xl"></i><span class="text-xs font-semibold">Slack</span></div>
+                <div class="flex flex-col items-center gap-2"><i class="fab fa-figma text-3xl"></i><span class="text-xs font-semibold">Figma</span></div>
+                <div class="flex flex-col items-center gap-2"><i class="fab fa-github text-3xl"></i><span class="text-xs font-semibold">GitHub</span></div>
+                <div class="flex flex-col items-center gap-2"><i class="fab fa-jenkins text-3xl"></i><span class="text-xs font-semibold">Jenkins</span></div>
+                <div class="flex flex-col items-center gap-2"><i class="fab fa-docker text-3xl"></i><span class="text-xs font-semibold">Docker</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-gradient-to-r from-brand-600 to-brand-700 rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden" data-aos="zoom-in">
+                <h3 class="relative z-10 text-3xl font-heading font-bold mb-6">Ready to Start Your Journey?</h3>
+                <p class="relative z-10 text-brand-100 mb-8 max-w-xl mx-auto">Our process is designed to minimize risk and maximize value. Let's discuss your project today.</p>
+                <a href="contact.html" class="relative z-10 inline-block px-8 py-3 bg-white text-brand-700 font-bold rounded-lg hover:bg-brand-50 transition-colors shadow-lg">
+                    Schedule a Discovery Call
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-300 pt-20 pb-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-1">
+                <h3 class="text-2xl font-bold text-white mb-6">Cognora<span class="text-brand-500">Tech</span></h3>
+                <p class="text-sm leading-relaxed text-slate-400">
+                    Delivering innovative, scalable, and reliable IT solutions to help businesses grow in the digital era.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="index.html" class="hover:text-brand-500 transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-brand-500 transition-colors">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-brand-500 transition-colors">Services</a></li>
+                    <li><a href="contact.html" class="hover:text-brand-500 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6">Services</h4>
+                <ul class="space-y-3 text-sm">
+                    <li>Web Development</li>
+                    <li>Mobile Apps</li>
+                    <li>UI/UX Design</li>
+                    <li>Cloud Solutions</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6">Contact</h4>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-center gap-3"><span class="text-brand-500">📧</span> info@cognoratech.com</li>
+                    <li class="flex items-center gap-3"><span class="text-brand-500">📞</span> +91 98765 43210</li>
+                    <li class="flex items-center gap-3"><span class="text-brand-500">📍</span> India</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+            <p>&copy; <span id="year"></span> Cognora Technologies Pvt. Ltd.</p>
+            <p>Designed by Cognora Tech</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({ once: true, offset: 50 });
+        // Dynamic Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Careers | Join Cognora Technologies</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#0f172a',
+                        },
+                        accent: '#06b6d4',
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(37, 99, 235, 0.15)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-slate-600 antialiased overflow-x-hidden selection:bg-brand-600 selection:text-white">
+
+    <!-- Navbar -->
+    <div id="scrollProgress"
+        class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-600 to-accent z-[100] w-0 transition-all duration-200">
+    </div>
+
+    <header id="navbar"
+        class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-transparent">
+        <nav class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="block group">
+                <img id="navLogo" src="assets/images/logo-nobg.png" alt="Cognora Technologies"
+                    class="h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html"
+                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Home</a>
+                <a href="about.html"
+                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">About</a>
+                <a href="services.html"
+                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Services</a>
+                <a href="careers.html"
+                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Careers</a>
+                <a href="contact.html"
+                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Contact</a>
+                <a href="#get-in-touch"
+                    class="px-5 py-2.5 bg-brand-900 text-white text-sm font-medium rounded-full hover:bg-brand-700 transition-all shadow-lg hover:shadow-brand-500/25">
+                    Get a Quote
+                </a>
+            </div>
+            <button id="menuBtn" class="md:hidden p-2 text-slate-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+        <div id="mobileMenu"
+            class="absolute top-full left-0 w-full bg-white border-b shadow-lg transform -translate-y-[150%] transition-transform duration-300 md:hidden -z-10">
+            <div class="flex flex-col p-6 gap-4 font-medium">
+                <a href="index.html" class="mobile-link">Home</a>
+                <a href="about.html" class="mobile-link">About</a>
+                <a href="services.html" class="mobile-link">Services</a>
+                <a href="careers.html" class="mobile-link">Careers</a>
+                <a href="contact.html" class="w-full text-center py-3 bg-brand-600 text-white rounded-lg">Get Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-20 bg-brand-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10" data-aos="fade-up">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-white border border-brand-100 text-brand-600 text-xs font-bold tracking-wide mb-6 shadow-sm">
+                JOIN THE TEAM
+            </span>
+            <h1 class="font-heading text-4xl md:text-6xl font-bold text-brand-900 mb-6">
+                Launch Your Career with <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-accent">Innovation</span>
+            </h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-8">
+                We are looking for passionate interns who want to work on real-world projects using Java Spring Boot, React, and AI technologies.
+            </p>
+            <a href="#openings" class="inline-block px-8 py-3 bg-brand-900 text-white font-bold rounded-lg hover:bg-brand-800 transition-all shadow-lg">
+                View Open Positions
+            </a>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-heading text-3xl font-bold text-brand-900">Why Intern at Cognora?</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all text-center" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center text-brand-600 text-2xl shadow-sm mb-4">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Expert Mentorship</h3>
+                    <p class="text-sm text-slate-500">Learn directly from senior developers with years of experience in Java & Cloud.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center text-accent text-2xl shadow-sm mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Real Projects</h3>
+                    <p class="text-sm text-slate-500">Don't just fetch coffee. Build code that actually goes into production.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-lg transition-all text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 mx-auto bg-white rounded-full flex items-center justify-center text-green-500 text-2xl shadow-sm mb-4">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">PPO Opportunities</h3>
+                    <p class="text-sm text-slate-500">Top performers get a Pre-Placement Offer (PPO) to join us full-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="openings" class="py-20 bg-brand-900 text-white relative">
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <h2 class="font-heading text-3xl font-bold mb-10 text-center">Current Openings</h2>
+
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all group" data-aos="fade-up">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span class="text-xs font-bold bg-green-500/20 text-green-400 px-2 py-1 rounded">INTERNSHIP</span>
+                            <h3 class="text-xl font-bold mt-2">Java Backend Intern</h3>
+                        </div>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-8 h-8 opacity-70" alt="Java"/>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Work with Spring Boot, Microservices, and database optimization. Knowledge of OOPs and SQL required.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-slate-400"><i class="fas fa-map-marker-alt mr-2"></i>Bhubaneswar / Remote</span>
+                        <button onclick="openModal('Java Backend Intern')" class="px-5 py-2 bg-brand-600 hover:bg-brand-500 rounded-lg text-sm font-bold transition-colors">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span class="text-xs font-bold bg-green-500/20 text-green-400 px-2 py-1 rounded">INTERNSHIP</span>
+                            <h3 class="text-xl font-bold mt-2">Frontend Developer Intern</h3>
+                        </div>
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-8 h-8 opacity-70" alt="React"/>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Build modern UIs using React.js and Tailwind CSS. Understanding of responsive design is a must.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-slate-400"><i class="fas fa-map-marker-alt mr-2"></i>Remote</span>
+                        <button onclick="openModal('Frontend Developer Intern')" class="px-5 py-2 bg-brand-600 hover:bg-brand-500 rounded-lg text-sm font-bold transition-colors">Apply Now</button>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span class="text-xs font-bold bg-green-500/20 text-green-400 px-2 py-1 rounded">INTERNSHIP</span>
+                            <h3 class="text-xl font-bold mt-2">UI/UX Design Intern</h3>
+                        </div>
+                        <i class="fab fa-figma text-3xl text-slate-500"></i>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Create wireframes and high-fidelity prototypes using Figma. Good visual sense required.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-slate-400"><i class="fas fa-map-marker-alt mr-2"></i>Remote</span>
+                        <button onclick="openModal('UI/UX Design Intern')" class="px-5 py-2 bg-brand-600 hover:bg-brand-500 rounded-lg text-sm font-bold transition-colors">Apply Now</button>
+                    </div>
+                </div>
+
+                 <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-all group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <span class="text-xs font-bold bg-green-500/20 text-green-400 px-2 py-1 rounded">INTERNSHIP</span>
+                            <h3 class="text-xl font-bold mt-2">Digital Marketing Intern</h3>
+                        </div>
+                        <i class="fas fa-bullhorn text-3xl text-slate-500"></i>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">
+                        Manage social media, write content, and learn SEO basics. Great for creative thinkers.
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-slate-400"><i class="fas fa-map-marker-alt mr-2"></i>Bhubaneswar</span>
+                        <button onclick="openModal('Digital Marketing Intern')" class="px-5 py-2 bg-brand-600 hover:bg-brand-500 rounded-lg text-sm font-bold transition-colors">Apply Now</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="applicationModal" class="fixed inset-0 z-[100] hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal()"></div>
+        
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-lg bg-white rounded-2xl shadow-2xl p-8 animate-fade-in">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            
+            <h3 class="font-heading text-2xl font-bold text-brand-900 mb-2">Apply for Role</h3>
+            <p id="modalRoleTitle" class="text-brand-600 font-medium mb-6">Software Intern</p>
+            
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Full Name</label>
+                    <input type="text" class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Email</label>
+                    <input type="email" class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Portfolio/LinkedIn URL</label>
+                    <input type="url" class="w-full px-4 py-2 border border-slate-200 rounded-lg focus:ring-2 focus:ring-brand-500 outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-1">Resume (PDF)</label>
+                    <input type="file" accept=".pdf" class="w-full px-4 py-2 border border-slate-200 rounded-lg bg-slate-50 text-sm">
+                </div>
+                <button type="button" onclick="alert('Application Sent! We will contact you soon.')" class="w-full py-3 bg-brand-600 text-white font-bold rounded-lg hover:bg-brand-700 transition-colors mt-2">
+                    Submit Application
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- newsletter -->
+    <section class="py-12 bg-gradient-to-r from-brand-700 to-accent relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="text-center md:text-left text-white">
+                <h3 class="text-2xl font-heading font-bold mb-2">Join our newsletter</h3>
+                <p class="text-brand-50 text-sm opacity-90">Get the latest insights on tech and growth. No spam, ever.
+                </p>
+            </div>
+
+            <form class="flex w-full max-w-md gap-2">
+                <input type="email" placeholder="Enter your email"
+                    class="w-full px-5 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:bg-white/20 transition-all backdrop-blur-sm">
+                <button type="button"
+                    class="px-6 py-3 bg-white text-brand-700 font-bold rounded-lg hover:bg-brand-50 transition-colors shadow-lg">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+<!-- footer section -->
+    <footer class=" bg-[#031233] text-slate-300 font-sans border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+
+            <div class="space-y-6">
+                <a href="index.html" class="block">
+                    <img src="assets/images/logo-dark.png" alt="Cognora Technologies"
+                        class="h-13 w-auto hover:opacity-100 transition-opacity">
+                </a>
+                <p class="text-sm leading-relaxed text-slate-400">
+                    Innovating intelligence and empowering the future with scalable IT solutions.
+                </p>
+                <div class="flex gap-4">
+                    <a href="https://www.linkedin.com/company/cognora-technologies/"
+                        class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition-all"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="#"
+                        class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition-all"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="#"
+                        class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition-all"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-6">Company</h4>
+                <ul class="space-y-3 text-sm text-slate-400">
+                    <li><a href="index.html" class="hover:text-brand-400 transition-colors">Home</a></li>
+                    <li><a href="about.html" class="hover:text-brand-400 transition-colors">About Us</a></li>
+                    <li><a href="services.html" class="hover:text-brand-400 transition-colors">Services</a></li>
+                    <li><a href="careers.html" class="hover:text-brand-400 transition-colors">Careers</a></li>
+                    <li><a href="contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-6">Services</h4>
+                <ul class="space-y-3 text-sm text-slate-400">
+                    <li><a href="services.html" class="hover:text-brand-400 transition-colors">Web Development</a></li>
+                    <li><a href="services.html" class="hover:text-brand-400 transition-colors">App Development</a></li>
+                    <li><a href="services.html" class="hover:text-brand-400 transition-colors">UI/UX Design</a></li>
+                    <li><a href="services.html" class="hover:text-brand-400 transition-colors">Digital Marketing</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-6">Contact</h4>
+                <ul class="space-y-4 text-sm text-slate-400">
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-brand-500"></i>
+                        <a href="mailto:info@cognoratech.com"
+                            class="hover:text-white transition-colors">info@cognoratech.com</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-brand-500"></i>
+                        <a href="mailto:marketing@cognoratech.com"
+                            class="hover:text-white transition-colors">marketing@cognoratech.com</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-phone-alt text-brand-500"></i>
+                        <span>+91 98765 43210</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-slate-800 bg-slate-950">
+            <div
+                class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <p>&copy; <span id="year"></span> Cognora Technologies Pvt. Ltd. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Modal Logic
+        const modal = document.getElementById('applicationModal');
+        const roleTitle = document.getElementById('modalRoleTitle');
+
+        function openModal(role) {
+            roleTitle.textContent = role;
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+        }
+    </script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
