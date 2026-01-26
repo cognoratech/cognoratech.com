@@ -65,23 +65,25 @@ html {
    4. CLIENT LOGO SLIDER (Infinite Loop)
    ========================================= */
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); } /* Moves exactly one set length */
+    }
 
-.slide-track {
-    display: flex;
-    width: max-content;
-    animation: scroll 40s linear infinite;
-}
+    /* Mobile Speed: 10 seconds (Faster) */
+    .animate-scroll {
+        animation: scroll 10s linear infinite;
+    }
 
-.slider:hover .slide-track {
-    animation-play-state: paused;
-}
-
-.logo-item {
-    padding: 0 3rem;
-}
+    /* Desktop Speed: 25 seconds (Slower) */
+    @media (min-width: 768px) {
+        .animate-scroll-slow {
+            animation: scroll 60s linear infinite;
+        }
+    }
+    /* Pause animation on hover for better user experience */
+    .animate-scroll:hover, .animate-scroll-slow:hover {
+        animation-play-state: paused;
+    }
 
 /* =========================================
    5. CAREER PAGE: ANIMATIONS

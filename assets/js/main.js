@@ -138,3 +138,85 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+/* ======================================================
+       7. Thank You  POP UP (Animations)
+    ====================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+    
+    // Select Elements
+    const form = document.getElementById('quoteForm');
+    const modal = document.getElementById('thankYouModal');
+    const backdrop = document.getElementById('modalBackdrop');
+    const panel = document.getElementById('modalPanel');
+    const closeBtn = document.getElementById('closeModalBtn'); // We will add this ID to your HTML button below
+
+    // 1. Handle Form Submission
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault(); // Stop page reload
+
+            // Show loading state on button
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span>Sending...</span>';
+            btn.disabled = true;
+
+            const formData = new FormData(form);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(async (response) => {
+                if (response.status === 200) {
+                    // Success! Show Modal
+                    showModal();
+                    form.reset(); // Clear the form
+                } else {
+                    console.log("Error", response);
+                    alert("Something went wrong. Please try again later.");
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                alert("Something went wrong. Please try again later.");
+            })
+            .finally(() => {
+                // Reset button
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            });
+        });
+    }
+
+    // 2. Handle Closing the Modal
+    if (closeBtn) {
+        closeBtn.addEventListener('click', closeModal);
+    }
+
+    // --- Helper Functions ---
+
+    function showModal() {
+        if (!modal) return;
+        modal.classList.remove('hidden');
+        // Simple animation
+        setTimeout(() => {
+            backdrop.classList.remove('opacity-0');
+            panel.classList.remove('scale-95', 'opacity-0');
+            panel.classList.add('scale-100', 'opacity-100');
+        }, 10);
+    }
+
+    function closeModal() {
+        if (!modal) return;
+        // Reverse animation
+        backdrop.classList.add('opacity-0');
+        panel.classList.remove('scale-100', 'opacity-100');
+        panel.classList.add('scale-95', 'opacity-0');
+
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 300); // Wait for transition to finish
+    }
+});

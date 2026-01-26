@@ -12,7 +12,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -46,10 +48,22 @@
 
     <style>
         /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
 
         /* Gradient Text */
         .text-gradient {
@@ -57,7 +71,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         /* Grid Pattern */
         .bg-grid-pattern {
             background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
@@ -116,263 +130,388 @@
 
     <!-- Hero Section -->
     <section class="relative pt-32 pb-20 bg-brand-50 overflow-hidden">
-        <div class="absolute inset-0 bg-grid-pattern opacity-50"></div>
+        <div
+            class="absolute inset-0 bg-grid-pattern opacity-50 [mask-image:linear-gradient(to_bottom,white,transparent)]">
+        </div>
+
         <div class="max-w-7xl mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
+            <span
+                class="inline-block px-3 py-1 bg-white border border-brand-100 text-brand-600 text-xs font-bold rounded-full mb-6 shadow-sm tracking-wider">
+                EST. 2025
+            </span>
             <h1 class="font-heading text-4xl md:text-5xl font-bold text-brand-900 mb-6">
-                About <span class="text-gradient">Cognora Technologies</span>
+                About <span class="text-gradient bg-gradient-to-br from-[#27bcce] to-[#032f7a]">Cognora Technologies</span>
             </h1>
             <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                We are a technology-driven company committed to delivering innovative and scalable digital solutions for businesses.
+                We are a technology-driven company committed to delivering innovative and scalable digital solutions for
+                businesses.
             </p>
         </div>
     </section>
-
+    <!-- Who we are -->
     <section class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-            
+
             <div data-aos="fade-right">
-                <div class="inline-block px-3 py-1 bg-blue-50 text-brand-600 text-xs font-bold rounded-full mb-4">WHO WE ARE</div>
-                <h2 class="font-heading text-3xl font-bold text-brand-900 mb-6">Transforming Ideas into <br><span class="text-brand-600">Digital Reality</span></h2>
-                
-                <p class="text-slate-600 mb-6 leading-relaxed">
-                    Cognora Technologies Pvt. Ltd. is an IT solutions company focused on helping startups, small businesses, and enterprises transform their ideas into powerful digital products. We specialize in web development, software solutions, and digital growth strategies.
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-900 mb-6">
+                    Transforming Ideas into <br><span class="text-gradient bg-gradient-to-br from-[#27bcce] to-[#032f7a]">Digital Reality</span>
+                </h2>
+
+                <p class="text-slate-600 mb-6 leading-relaxed text-lg">
+                    Cognora Technologies Pvt. Ltd. is an IT solutions company focused on helping startups, small
+                    businesses, and enterprises transform their ideas into powerful digital products. We specialize in
+                    web development, software solutions, and digital growth strategies.
                 </p>
                 <p class="text-slate-600 mb-8 leading-relaxed">
-                    Our team believes in innovation, transparency, and long-term partnerships. We don’t just build products — we build solutions that create real business value.
+                    Our team believes in innovation, transparency, and long-term partnerships. We don’t just build
+                    products — we build solutions that create real business value.
                 </p>
 
                 <div class="flex gap-12 border-t border-slate-100 pt-8">
                     <div>
-                        <h4 class="text-3xl font-bold text-brand-900">50+</h4>
-                        <p class="text-sm text-slate-500">Projects Completed</p>
+                        <h4 class="text-4xl font-bold text-brand-900">75+</h4>
+                        <p class="text-sm text-slate-500 font-medium uppercase tracking-wide mt-1">Projects Completed
+                        </p>
                     </div>
                     <div>
-                        <h4 class="text-3xl font-bold text-brand-900">98%</h4>
-                        <p class="text-sm text-slate-500">Client Satisfaction</p>
+                        <h4 class="text-4xl font-bold text-brand-900">98%</h4>
+                        <p class="text-sm text-slate-500 font-medium uppercase tracking-wide mt-1">Client Satisfaction
+                        </p>
                     </div>
                 </div>
             </div>
 
             <div class="relative" data-aos="fade-left">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="About Us" class="rounded-2xl shadow-2xl relative z-10">
+                <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl border border-slate-100 group">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Team Meeting"
+                        class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-brand-900/10 group-hover:bg-transparent transition-colors"></div>
+                </div>
                 <div class="absolute -top-10 -right-10 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-0"></div>
                 <div class="absolute -bottom-10 -left-10 w-64 h-64 bg-brand-500/10 rounded-full blur-3xl -z-0"></div>
             </div>
 
         </div>
     </section>
+    <!-- Our mission & Vision -->
+    <section class="py-24 bg-brand-900 relative overflow-hidden">
 
-    <section class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+        <div
+            class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
+        </div>
 
-            <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-glow transition-all duration-300 border border-slate-100" data-aos="fade-up" data-aos-delay="0">
-                <div class="w-14 h-14 bg-blue-50 text-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6">
-                    🚀
-                </div>
-                <h3 class="font-heading text-2xl font-bold text-brand-900 mb-4">Our Mission</h3>
-                <p class="text-slate-600 leading-relaxed">
-                    To deliver reliable, innovative, and cost-effective digital solutions that empower businesses to achieve sustainable growth in the digital era.
-                </p>
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-600/20 rounded-full blur-[100px] pointer-events-none">
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+
+            <div
+                class="hidden md:block absolute top-1/2 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-brand-500/50 to-transparent -translate-y-1/2 z-0">
             </div>
 
-            <div class="bg-white p-10 rounded-2xl shadow-sm hover:shadow-glow transition-all duration-300 border border-slate-100" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-14 h-14 bg-cyan-50 text-accent rounded-xl flex items-center justify-center text-2xl mb-6">
-                    👁️
+            <div class="grid md:grid-cols-2 gap-12 relative">
+
+                <div class="group relative bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(37,99,235,0.3)] hover:border-brand-500/50"
+                    data-aos="fade-right">
+                    <div
+                        class="absolute -right-2 top-1/2 w-4 h-4 bg-brand-500 rounded-full shadow-[0_0_15px_rgba(37,99,235,1)] hidden md:block translate-x-1/2 -translate-y-1/2 z-20">
+                    </div>
+
+                    <div
+                        class="w-16 h-16 bg-brand-600/20 rounded-2xl flex items-center justify-center mb-6 border border-brand-500/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg shadow-brand-900/50">
+                        <svg class="w-8 h-8 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <p class="text-brand-400 text-xs font-bold uppercase tracking-[0.2em] mb-2">The Launchpad</p>
+                    <h3
+                        class="font-heading text-3xl font-bold text-white mb-4 group-hover:text-brand-200 transition-colors">
+                        Our Mission</h3>
+                    <p class="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
+                        To deliver reliable, innovative, and cost-effective digital solutions that empower businesses to
+                        achieve sustainable growth in the digital era.
+                    </p>
                 </div>
-                <h3 class="font-heading text-2xl font-bold text-brand-900 mb-4">Our Vision</h3>
-                <p class="text-slate-600 leading-relaxed">
-                    To become a trusted global technology partner known for quality, innovation, and customer-centric solutions.
-                </p>
+
+                <div class="group relative bg-white/5 backdrop-blur-md border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(6,182,212,0.3)] hover:border-accent/50"
+                    data-aos="fade-left" data-aos-delay="200">
+                    <div
+                        class="absolute -left-2 top-1/2 w-4 h-4 bg-accent rounded-full shadow-[0_0_15px_rgba(6,182,212,1)] hidden md:block -translate-x-1/2 -translate-y-1/2 z-20">
+                    </div>
+
+                    <div
+                        class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mb-6 border border-accent/30 group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 shadow-lg shadow-brand-900/50">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <p class="text-accent text-xs font-bold uppercase tracking-[0.2em] mb-2">The Destination</p>
+                    <h3
+                        class="font-heading text-3xl font-bold text-white mb-4 group-hover:text-cyan-200 transition-colors">
+                        Our Vision</h3>
+                    <p class="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">
+                        To become a trusted global technology partner known for quality, innovation, and
+                        customer-centric solutions.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Meet the founder -->
+    <section id="our-team" class="py-24 bg-slate-50 relative">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-900">Meet The <span
+                        class="text-gradient bg-gradient-to-br from-[#27bcce] to-[#032f7a]">Leadership</span></h2>
+                <p class="text-slate-500 mt-4 max-w-2xl mx-auto">The visionary minds driving innovation at Cognora.</p>
             </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 text-center relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="0">
+                    <div
+                        class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-brand-50 relative group-hover:border-brand-200 transition-colors">
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Sridhar Panigrahi"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+
+                    <h3 class="text-xl font-bold text-brand-900">Sridhar Panigrahi</h3>
+                    <p class="text-slate-500 font-medium text-sm mb-4">Industry Expert</p>
+
+                    <div class="flex justify-center gap-4 pt-4 border-t border-slate-100">
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-[#0077b5] hover:text-white transition-all duration-300 hover:-translate-y-1">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-black hover:text-white transition-all duration-300 hover:-translate-y-1">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 text-center relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-brand-50 relative group-hover:border-brand-200 transition-colors">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Rudra Prasad Mahapatra"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+
+                    <h3 class="text-xl font-bold text-brand-900">R P Mahapatra</h3>
+                    <p class="text-slate-500 font-medium  text-sm mb-4">Full Stack Developer</p>
+
+                    <div class="flex justify-center gap-4 pt-4 border-t border-slate-100">
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-[#0077b5] hover:text-white transition-all duration-300 hover:-translate-y-1">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-[#E1306C] hover:text-white transition-all duration-300 hover:-translate-y-1">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-black hover:text-white transition-all duration-300 hover:-translate-y-1">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 text-center relative overflow-hidden"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-brand-50 relative group-hover:border-brand-200 transition-colors">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Krushna Pattnaik"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+
+                    <h3 class="text-xl font-bold text-brand-900">Krushna Pattnaik</h3>
+                    <p class="text-slate-500 font-medium text-sm mb-4">Marketing Lead</p>
+
+                    <div class="flex justify-center gap-4 pt-4 border-t border-slate-100">
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-[#0077b5] hover:text-white transition-all duration-300 hover:-translate-y-1">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-[#E1306C] hover:text-white transition-all duration-300 hover:-translate-y-1">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- Meet the founder -->
-    <section class="py-24 bg-brand-900 relative overflow-hidden">
-    
-    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-600/20 rounded-full blur-3xl -translate-y-1/2"></div>
-    <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-accent/10 rounded-full blur-3xl translate-y-1/2"></div>
+    <!-- Our Core Values -->
+    <section class="py-24 bg-gradient-to-br from-[#031233] via-[#0f2859] to-[#1e40af] relative overflow-hidden">
 
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-        
-        <div class="text-center mb-16" data-aos="fade-up">
-            <span class="inline-block px-3 py-1 bg-brand-800 border border-brand-700 text-brand-300 font-bold rounded-full text-xs mb-4 uppercase tracking-wider">
-                Visionaries
-            </span>
-            <h2 class="font-heading text-3xl md:text-4xl font-bold text-white">
-                Meet Our Founders<span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-accent">Leadership</span>
-            </h2>
-            <p class="text-slate-400 mt-4 max-w-2xl mx-auto">
-                Guided by industry expertise, technical innovation, and strategic growth.
-            </p>
+        <div
+            class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px]">
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-            <div class="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
-                <div class="h-80 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                         alt="Sridhar Panigrahi" 
-                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
-                    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-brand-900 to-transparent"></div>
-                </div>
-                
-                <div class="p-8 relative -mt-12">
-                    <div class="w-12 h-12 bg-brand-600 rounded-lg flex items-center justify-center text-white text-xl shadow-lg mb-4 border border-brand-400">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-1">Sridhar Panigrahi</h3>
-                    <p class="text-brand-400 font-medium text-sm uppercase tracking-wide mb-4">Industry Expert</p>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                        Bringing years of corporate wisdom and strategic insight to guide Cognora’s roadmap and ensure alignment with industry standards.
-                    </p>
-                    
-                    <div class="flex gap-4 border-t border-white/10 pt-4">
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-linkedin text-lg"></i></a>
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fas fa-envelope text-lg"></i></a>
-                    </div>
-                </div>
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span
+                    class="inline-block px-3 py-1 bg-white/10 border border-white/20 text-accent font-bold rounded-full text-xs mb-4 uppercase tracking-[0.2em] backdrop-blur-md">
+                    Our DNA
+                </span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-white">
+                    Core <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Values</span>
+                </h2>
             </div>
 
-            <div class="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                <div class="h-80 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                         alt="Rudra Prasad Mahapatra" 
-                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
-                    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-brand-900 to-transparent"></div>
-                </div>
-                
-                <div class="p-8 relative -mt-12">
-                    <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center text-white text-xl shadow-lg mb-4 border border-cyan-400">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-1">Rudra P. Mahapatra</h3>
-                    <p class="text-accent font-medium text-sm uppercase tracking-wide mb-4">Full Stack Developer</p>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                        The technical architect behind our solutions. Specializing in Java Spring Boot and scalable cloud infrastructures.
-                    </p>
-                    
-                    <div class="flex gap-4 border-t border-white/10 pt-4">
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-linkedin text-lg"></i></a>
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-github text-lg"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:bg-white/10 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                <div class="h-80 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                         alt="Krushna Pattnaik" 
-                         class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
-                    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-brand-900 to-transparent"></div>
-                </div>
-                
-                <div class="p-8 relative -mt-12">
-                    <div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center text-white text-xl shadow-lg mb-4 border border-orange-400">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-white mb-1">Krushna Pattnaik</h3>
-                    <p class="text-orange-400 font-medium text-sm uppercase tracking-wide mb-4">Marketing Lead</p>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">
-                        Driving growth and brand visibility. Focused on digital strategies that connect our technology with the people who need it.
-                    </p>
-                    
-                    <div class="flex gap-4 border-t border-white/10 pt-4">
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-linkedin text-lg"></i></a>
-                        <a href="#" class="text-slate-400 hover:text-white transition-colors"><i class="fab fa-twitter text-lg"></i></a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-    <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-heading text-3xl font-bold text-brand-900">Our <span class="text-gradient">Core Values</span></h2>
-                <p class="text-slate-500 mt-4">The principles that guide every decision we make.</p>
-            </div>
+            <div class="hidden lg:block absolute top-[60%] left-6 right-6 h-[1px] bg-white/10 -z-0"></div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                
-                <div class="group text-center p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-slate-100" data-aos="fade-up" data-aos-delay="0">
-                    <div class="w-16 h-16 mx-auto bg-white shadow-sm rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform text-brand-600">
-                        🤝
+
+                <div class="group relative bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl hover:-translate-y-2 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 z-10"
+                    data-aos="fade-up">
+                    <div
+                        class="w-20 h-20 mx-auto bg-[#020c22] rounded-full border-2 border-cyan-500/30 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(6,182,212,0.2)] group-hover:scale-110 group-hover:border-cyan-400 group-hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all duration-500">
+                        <svg class="w-10 h-10 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
                     </div>
-                    <h5 class="font-bold text-lg text-slate-900 mb-2">Integrity</h5>
-                    <p class="text-sm text-slate-500">Honesty in every interaction.</p>
+                    <div class="text-center">
+                        <h5 class="font-bold text-xl text-white mb-2">Integrity</h5>
+                        <p class="text-sm text-slate-300 leading-relaxed">Honesty and transparency in every line of
+                            code.</p>
+                    </div>
                 </div>
 
-                <div class="group text-center p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-slate-100" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-16 h-16 mx-auto bg-white shadow-sm rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform text-yellow-500">
-                        💡
+                <div class="group relative bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl hover:-translate-y-2 hover:bg-white/10 hover:border-yellow-400/50 transition-all duration-300 z-10"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-20 h-20 mx-auto bg-[#020c22] rounded-full border-2 border-yellow-500/30 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(250,204,21,0.2)] group-hover:scale-110 group-hover:border-yellow-400 group-hover:shadow-[0_0_30px_rgba(250,204,21,0.6)] transition-all duration-500">
+                        <svg class="w-10 h-10 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                            </path>
+                        </svg>
                     </div>
-                    <h5 class="font-bold text-lg text-slate-900 mb-2">Innovation</h5>
-                    <p class="text-sm text-slate-500">Creative problem solving.</p>
+                    <div class="text-center">
+                        <h5 class="font-bold text-xl text-white mb-2">Innovation</h5>
+                        <p class="text-sm text-slate-300 leading-relaxed">We don't just follow trends; we set them.</p>
+                    </div>
                 </div>
 
-                <div class="group text-center p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-slate-100" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-16 h-16 mx-auto bg-white shadow-sm rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform text-red-500">
-                        🎯
+                <div class="group relative bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl hover:-translate-y-2 hover:bg-white/10 hover:border-pink-400/50 transition-all duration-300 z-10"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-20 h-20 mx-auto bg-[#020c22] rounded-full border-2 border-pink-500/30 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(236,72,153,0.2)] group-hover:scale-110 group-hover:border-pink-400 group-hover:shadow-[0_0_30px_rgba(236,72,153,0.6)] transition-all duration-500">
+                        <svg class="w-10 h-10 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
                     </div>
-                    <h5 class="font-bold text-lg text-slate-900 mb-2">Customer Focus</h5>
-                    <p class="text-sm text-slate-500">Your success is our priority.</p>
+                    <div class="text-center">
+                        <h5 class="font-bold text-xl text-white mb-2">Focus</h5>
+                        <p class="text-sm text-slate-300 leading-relaxed">Your success is our priority. We align with
+                            your goals.</p>
+                    </div>
                 </div>
 
-                <div class="group text-center p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-lg transition-all duration-300 border border-transparent hover:border-slate-100" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-16 h-16 mx-auto bg-white shadow-sm rounded-full flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform text-purple-500">
-                        🚀
+                <div class="group relative bg-white/5 backdrop-blur-md border border-white/10 p-8 rounded-2xl hover:-translate-y-2 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 z-10"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-20 h-20 mx-auto bg-[#020c22] rounded-full border-2 border-purple-500/30 flex items-center justify-center mb-6 shadow-[0_0_20px_rgba(168,85,247,0.2)] group-hover:scale-110 group-hover:border-purple-400 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all duration-500">
+                        <svg class="w-10 h-10 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+                            </path>
+                        </svg>
                     </div>
-                    <h5 class="font-bold text-lg text-slate-900 mb-2">Excellence</h5>
-                    <p class="text-sm text-slate-500">Quality in every line of code.</p>
+                    <div class="text-center">
+                        <h5 class="font-bold text-xl text-white mb-2">Excellence</h5>
+                        <p class="text-sm text-slate-300 leading-relaxed">Quality in every pixel. Never "good enough."
+                        </p>
+                    </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="bg-gradient-to-r from-brand-600 to-brand-700 rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden" data-aos="zoom-in">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/4"></div>
-                <div class="absolute bottom-0 left-0 w-40 h-40 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/4"></div>
-
-                <h3 class="relative z-10 text-3xl font-heading font-bold mb-6">Let’s Build Something Great Together</h3>
-                <p class="relative z-10 text-brand-100 mb-8 max-w-xl mx-auto">Have a project in mind? We'd love to hear about it and help you achieve your goals.</p>
-                
-                <a href="contact.html" class="relative z-10 inline-block px-8 py-3 bg-white text-brand-700 font-bold rounded-lg hover:bg-brand-50 transition-colors shadow-lg">
-                    Contact Us
-                </a>
             </div>
         </div>
     </section>
 
     <!-- newsletter -->
-    <section class="py-12 bg-gradient-to-r from-brand-700 to-accent relative overflow-hidden">
-        <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-gradient-to-br from-[#031233] via-[#0f2859] to-[#1e40af] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden border border-white/10"
+                data-aos="zoom-in">
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div class="text-center md:text-left text-white">
-                <h3 class="text-2xl font-heading font-bold mb-2">Join our newsletter</h3>
-                <p class="text-brand-50 text-sm opacity-90">Get the latest insights on tech and growth. No spam, ever.
+                <div
+                    class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px]">
+                </div>
+
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full -translate-y-1/2 translate-x-1/4 blur-3xl">
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-40 h-40 bg-brand-600/20 rounded-full translate-y-1/2 -translate-x-1/4 blur-3xl">
+                </div>
+
+                <h3 class="relative z-10 text-3xl font-heading font-bold mb-6">Let’s Build Something Great Together</h3>
+                <p class="relative z-10 text-brand-100/80 mb-8 max-w-xl mx-auto leading-relaxed">
+                    Have a project in mind? We'd love to hear about it and help you achieve your goals.
                 </p>
-            </div>
 
-            <form class="flex w-full max-w-md gap-2">
-                <input type="email" placeholder="Enter your email"
-                    class="w-full px-5 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:bg-white/20 transition-all backdrop-blur-sm">
-                <button type="button"
-                    class="px-6 py-3 bg-white text-brand-700 font-bold rounded-lg hover:bg-brand-50 transition-colors shadow-lg">
-                    Subscribe
-                </button>
-            </form>
+                <a href="contact.html"
+                    class="relative z-10 inline-block px-8 py-3.5 bg-white text-[#031233] font-bold rounded-lg hover:bg-brand-50 hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                    Contact Us
+                </a>
+            </div>
         </div>
     </section>
-<!-- footer section -->
-        <footer class=" bg-[#031233] text-slate-300 font-sans border-t border-slate-800">
+    <!-- footer section -->
+    <footer class=" bg-[#031233] text-slate-300 font-sans border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
             <div class="space-y-6">
@@ -458,8 +597,9 @@
         // Dynamic Year
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-    
+
     <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
