@@ -49,6 +49,11 @@
     </script>
 
     <style>
+        html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
@@ -126,7 +131,7 @@
             class="absolute top-full left-0 w-full bg-white border-b shadow-lg transform -translate-y-[150%] transition-transform duration-300 md:hidden -z-10">
             <div class="flex flex-col p-6 gap-4 font-medium">
                 <!-- Mobile Menu Header with Close Button -->
-               
+
                 <hr class="border-slate-100 -mt-1">
                 <a href="index.html" class="mobile-link">Home</a>
                 <a href="about.html" class="mobile-link">About</a>
@@ -161,7 +166,7 @@
                 </p>
 
                 <div class="space-y-6">
-                   
+
 
                     <div
                         class="flex items-start gap-4 p-6 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-md transition-shadow">
@@ -219,61 +224,58 @@
                             hours.</p>
                     </div>
 
-                     <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                            <input type="hidden" name="access_key" value="4db9d95d-8052-4af5-a0dc-34dbaccd3303">
+                    <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                        <input type="hidden" name="access_key" value="4db9d95d-8052-4af5-a0dc-34dbaccd3303">
 
-                            <input type="hidden" name="redirect" value="https://cognoratech.com/thank-you.html">
+                        <input type="hidden" name="redirect" value="https://cognoratech.com/thank-you.html">
 
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="space-y-1">
-                                    <label
-                                        class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Name</label>
-                                    <input type="text" name="name" placeholder="Your Name" required
-                                        class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white placeholder-white/40 backdrop-blur-md hover:border-white/40">
-                                </div>
-                                <div class="space-y-1">
-                                    <label
-                                        class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Phone</label>
-                                    <input type="tel" name="phone" placeholder="+91..." required
-                                        class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white placeholder-white/40 backdrop-blur-md hover:border-white/40">
-                                </div>
-                            </div>
-
+                        <div class="grid grid-cols-2 gap-4">
                             <div class="space-y-1">
-                                <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Email
-                                    Address</label>
-                                <input type="email" name="email" placeholder="Your Email " required
+                                <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Name</label>
+                                <input type="text" name="name" placeholder="Your Name" required
                                     class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white placeholder-white/40 backdrop-blur-md hover:border-white/40">
                             </div>
-
                             <div class="space-y-1">
-                                <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Service
-                                    Needed</label>
-                                <select name="service"
-                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white backdrop-blur-md hover:border-white/40">
-                                    <option value="" disabled selected class="text-slate-500">Select a service...
-                                    </option>
-                                    <option value="Web Development" class="text-slate-900">Web Development</option>
-                                    <option value="Mobile App Development" class="text-slate-900">Mobile App Development
-                                    </option>
-                                    <option value="UI/UX Design" class="text-slate-900">UI/UX Design</option>
-                                    <option value="Digital Marketing" class="text-slate-900">Digital Marketing</option>
-                                    <option value="Excel Customisation" class="text-slate-900">Excel Customisation
-                                    </option>
-                                </select>
+                                <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Phone</label>
+                                <input type="tel" name="phone" placeholder="+91..." required
+                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white placeholder-white/40 backdrop-blur-md hover:border-white/40">
                             </div>
+                        </div>
 
-                            <button type="submit"
-                                class="w-full py-4 bg-white text-[#032f7a] font-bold rounded-lg hover:bg-cyan-50 transition-all shadow-lg hover:shadow-cyan-500/20 flex justify-center items-center gap-2 group mt-2">
-                                <span>Request Consultation</span>
-                                <i
-                                    class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
-                            </button>
+                        <div class="space-y-1">
+                            <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Email
+                                Address</label>
+                            <input type="email" name="email" placeholder="Your Email " required
+                                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white placeholder-white/40 backdrop-blur-md hover:border-white/40">
+                        </div>
 
-                            <p class="text-center text-xs text-white/60 mt-3">
-                                <i class="fas fa-lock text-[10px]"></i> Your data is secure. No spam.
-                            </p>
-                        </form>
+                        <div class="space-y-1">
+                            <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Service
+                                Needed</label>
+                            <select name="service"
+                                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white backdrop-blur-md hover:border-white/40">
+                                <option value="" disabled selected class="text-slate-500">Select a service...
+                                </option>
+                                <option value="Web Development" class="text-slate-900">Web Development</option>
+                                <option value="Mobile App Development" class="text-slate-900">Mobile App Development
+                                </option>
+                                <option value="UI/UX Design" class="text-slate-900">UI/UX Design</option>
+                                <option value="Digital Marketing" class="text-slate-900">Digital Marketing</option>
+                                <option value="Excel Customisation" class="text-slate-900">Excel Customisation
+                                </option>
+                            </select>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-4 bg-white text-[#032f7a] font-bold rounded-lg hover:bg-cyan-50 transition-all shadow-lg hover:shadow-cyan-500/20 flex justify-center items-center gap-2 group mt-2">
+                            <span>Request Consultation</span>
+                            <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+
+                        <p class="text-center text-xs text-white/60 mt-3">
+                            <i class="fas fa-lock text-[10px]"></i> Your data is secure. No spam.
+                        </p>
+                    </form>
                 </div>
             </div>
         </div>
