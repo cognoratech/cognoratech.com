@@ -113,9 +113,19 @@
                     Get a Quote
                 </a>
             </div>
-            <button id="menuBtn" class="md:hidden p-2 text-slate-800 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button id="menuBtn"
+                class="md:hidden p-2 text-slate-800 focus:outline-none relative w-10 h-10 flex items-center justify-center"
+                aria-label="Toggle menu">
+                <!-- Hamburger Icon -->
+                <svg id="iconHamburger" class="w-6 h-6 absolute transition-all duration-300 opacity-100 rotate-0"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+                <!-- Close (X) Icon -->
+                <svg id="iconClose" class="w-6 h-6 absolute transition-all duration-300 opacity-0 rotate-90" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
                     </path>
                 </svg>
             </button>
@@ -123,6 +133,9 @@
         <div id="mobileMenu"
             class="absolute top-full left-0 w-full bg-white border-b shadow-lg transform -translate-y-[150%] transition-transform duration-300 md:hidden -z-10">
             <div class="flex flex-col p-6 gap-4 font-medium">
+                <!-- Mobile Menu Header with Close Button -->
+               
+                <hr class="border-slate-100 -mt-1">
                 <a href="index.html" class="mobile-link">Home</a>
                 <a href="about.html" class="mobile-link">About</a>
                 <a href="services.html" class="mobile-link">Services</a>
@@ -195,60 +208,57 @@
                     </div>
 
                     <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                            <input type="hidden" name="access_key" value="4db9d95d-8052-4af5-a0dc-34dbaccd3303">
+                        <input type="hidden" name="access_key" value="4db9d95d-8052-4af5-a0dc-34dbaccd3303">
 
-                            <input type="hidden" name="redirect" value="https://cognoratech.com/thank-you.html">
+                        <input type="hidden" name="redirect" value="https://cognoratech.com/thank-you.html">
 
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="space-y-1">
-                                    <label
-                                        class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Name</label>
-                                    <input type="text" name="name" placeholder="Your Name" required
-                                        class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white placeholder-white/40 backdrop-blur-md hover:border-white/40">
-                                </div>
-                                <div class="space-y-1">
-                                    <label
-                                        class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Phone</label>
-                                    <input type="tel" name="phone" placeholder="+91..." required
-                                        class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white placeholder-white/40 backdrop-blur-md hover:border-white/40">
-                                </div>
-                            </div>
-
+                        <div class="grid grid-cols-2 gap-4">
                             <div class="space-y-1">
-                                <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Email
-                                    Address</label>
-                                <input type="email" name="email" placeholder="Your Email " required
+                                <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Name</label>
+                                <input type="text" name="name" placeholder="Your Name" required
                                     class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white placeholder-white/40 backdrop-blur-md hover:border-white/40">
                             </div>
-
                             <div class="space-y-1">
-                                <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Service
-                                    Needed</label>
-                                <select name="service"
-                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white backdrop-blur-md hover:border-white/40">
-                                    <option value="" disabled selected class="text-slate-500">Select a service...
-                                    </option>
-                                    <option value="Web Development" class="text-slate-900">Web Development</option>
-                                    <option value="Mobile App Development" class="text-slate-900">Mobile App Development
-                                    </option>
-                                    <option value="UI/UX Design" class="text-slate-900">UI/UX Design</option>
-                                    <option value="Digital Marketing" class="text-slate-900">Digital Marketing</option>
-                                    <option value="Excel Customisation" class="text-slate-900">Excel Customisation
-                                    </option>
-                                </select>
+                                <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Phone</label>
+                                <input type="tel" name="phone" placeholder="+91..." required
+                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white placeholder-white/40 backdrop-blur-md hover:border-white/40">
                             </div>
+                        </div>
 
-                            <button type="submit"
-                                class="w-full py-4 bg-white text-[#032f7a] font-bold rounded-lg hover:bg-cyan-50 transition-all shadow-lg hover:shadow-cyan-500/20 flex justify-center items-center gap-2 group mt-2">
-                                <span>Request Consultation</span>
-                                <i
-                                    class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
-                            </button>
+                        <div class="space-y-1">
+                            <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Email
+                                Address</label>
+                            <input type="email" name="email" placeholder="Your Email " required
+                                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white placeholder-white/40 backdrop-blur-md hover:border-white/40">
+                        </div>
 
-                            <p class="text-center text-xs text-white/60 mt-3">
-                                <i class="fas fa-lock text-[10px]"></i> Your data is secure. No spam.
-                            </p>
-                        </form>
+                        <div class="space-y-1">
+                            <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Service
+                                Needed</label>
+                            <select name="service"
+                                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white backdrop-blur-md hover:border-white/40">
+                                <option value="" disabled selected class="text-slate-500">Select a service...
+                                </option>
+                                <option value="Web Development" class="text-slate-900">Web Development</option>
+                                <option value="Mobile App Development" class="text-slate-900">Mobile App Development
+                                </option>
+                                <option value="UI/UX Design" class="text-slate-900">UI/UX Design</option>
+                                <option value="Digital Marketing" class="text-slate-900">Digital Marketing</option>
+                                <option value="Excel Customisation" class="text-slate-900">Excel Customisation
+                                </option>
+                            </select>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full py-4 bg-white text-[#032f7a] font-bold rounded-lg hover:bg-cyan-50 transition-all shadow-lg hover:shadow-cyan-500/20 flex justify-center items-center gap-2 group mt-2">
+                            <span>Request Consultation</span>
+                            <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                        </button>
+
+                        <p class="text-center text-xs text-white/60 mt-3">
+                            <i class="fas fa-lock text-[10px]"></i> Your data is secure. No spam.
+                        </p>
+                    </form>
                 </div>
             </div>
 
@@ -310,67 +320,83 @@
                 </div>
             </div>
 
-         <div class="py-6 bg-white border-b border-slate-100">
-    <div class="py-6 bg-white border-b border-slate-100 overflow-hidden">
-    
-    <p class="text-center text-xs font-bold text-slate-400 mb-10 uppercase tracking-[0.2em]">
-        Trusted by Innovative Companies
-    </p>
+            <div class="py-6 bg-white border-b border-slate-100">
+                <div class="py-6 bg-white border-b border-slate-100 overflow-hidden">
 
-    <div class="relative w-full">
-        
-        <div class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-        <div class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+                    <p class="text-center text-xs font-bold text-slate-400 mb-10 uppercase tracking-[0.2em]">
+                        Trusted by Innovative Companies
+                    </p>
 
-        <div class="flex items-center animate-scroll md:animate-scroll-slow w-max">
+                    <div class="relative w-full">
 
-            <div class="flex items-center">
-                <div class="w-[25vw] flex justify-center px-4">
-                    <img src="assets/images/clients/client1.png" alt="Client 1" class="h-16 w-auto object-contain max-w-full">
+                        <div
+                            class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none">
+                        </div>
+                        <div
+                            class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none">
+                        </div>
+
+                        <div class="flex items-center animate-scroll md:animate-scroll-slow w-max">
+
+                            <div class="flex items-center">
+                                <div class="w-[25vw] flex justify-center px-4">
+                                    <img src="assets/images/clients/client1.png" alt="Client 1"
+                                        class="h-16 w-auto object-contain max-w-full">
+                                </div>
+                                <div class="w-[25vw] flex justify-center px-4">
+                                    <img src="assets/images/clients/client2.png" alt="Client 2"
+                                        class="h-16 w-auto object-contain max-w-full">
+                                </div>
+                                <div class="w-[25vw] flex justify-center px-4">
+                                    <img src="assets/images/clients/client3.png" alt="Client 3"
+                                        class="h-16 w-auto object-contain max-w-full">
+                                </div>
+                                <div class="w-[25vw] flex justify-center px-4">
+                                    <img src="assets/images/clients/client4.png" alt="Client 4"
+                                        class="h-16 w-auto object-contain max-w-full">
+                                </div>
+                                <div class="w-[25vw] flex justify-center px-4">
+                                    <img src="assets/images/clients/client5.png" alt="Client 5"
+                                        class="h-16 w-auto object-contain max-w-full">
+                                </div>
+                                <div class="w-[25vw] flex justify-center px-4">
+                                    <img src="assets/images/clients/client6.png" alt="Client 6"
+                                        class="h-16 w-auto object-contain max-w-full">
+                                </div>
+                            </div>
+
+                            <div class="flex items-center" aria-hidden="true">
+                                <div class="w-[25vw] flex justify-center px-4">
+                                    <img src="assets/images/clients/client1.png" alt="Client 1"
+                                        class="h-16 w-auto object-contain max-w-full">
+                                </div>
+                                <div class="w-[25vw] flex justify-center px-4">
+                                    <img src="assets/images/clients/client2.png" alt="Client 2"
+                                        class="h-16 w-auto object-contain max-w-full">
+                                </div>
+                                <div class="w-[25vw] flex justify-center px-4">
+                                    <img src="assets/images/clients/client3.png" alt="Client 3"
+                                        class="h-16 w-auto object-contain max-w-full">
+                                </div>
+                                <div class="w-[25vw] flex justify-center px-4">
+                                    <img src="assets/images/clients/client4.png" alt="Client 4"
+                                        class="h-16 w-auto object-contain max-w-full">
+                                </div>
+                                <div class="w-[25vw] flex justify-center px-4">
+                                    <img src="assets/images/clients/client5.png" alt="Client 5"
+                                        class="h-16 w-auto object-contain max-w-full">
+                                </div>
+                                <div class="w-[25vw] flex justify-center px-4">
+                                    <img src="assets/images/clients/client6.png" alt="Client 6"
+                                        class="h-16 w-auto object-contain max-w-full">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="w-[25vw] flex justify-center px-4">
-                    <img src="assets/images/clients/client2.png" alt="Client 2" class="h-16 w-auto object-contain max-w-full">
-                </div>
-                <div class="w-[25vw] flex justify-center px-4">
-                    <img src="assets/images/clients/client3.png" alt="Client 3" class="h-16 w-auto object-contain max-w-full">
-                </div>
-                <div class="w-[25vw] flex justify-center px-4">
-                    <img src="assets/images/clients/client4.png" alt="Client 4" class="h-16 w-auto object-contain max-w-full">
-                </div>
-                <div class="w-[25vw] flex justify-center px-4">
-                    <img src="assets/images/clients/client5.png" alt="Client 5" class="h-16 w-auto object-contain max-w-full">
-                </div>
-                <div class="w-[25vw] flex justify-center px-4">
-                    <img src="assets/images/clients/client6.png" alt="Client 6" class="h-16 w-auto object-contain max-w-full">
-                </div>
+
             </div>
-
-            <div class="flex items-center" aria-hidden="true">
-                <div class="w-[25vw] flex justify-center px-4">
-                    <img src="assets/images/clients/client1.png" alt="Client 1" class="h-16 w-auto object-contain max-w-full">
-                </div>
-                <div class="w-[25vw] flex justify-center px-4">
-                    <img src="assets/images/clients/client2.png" alt="Client 2" class="h-16 w-auto object-contain max-w-full">
-                </div>
-                <div class="w-[25vw] flex justify-center px-4">
-                    <img src="assets/images/clients/client3.png" alt="Client 3" class="h-16 w-auto object-contain max-w-full">
-                </div>
-                <div class="w-[25vw] flex justify-center px-4">
-                    <img src="assets/images/clients/client4.png" alt="Client 4" class="h-16 w-auto object-contain max-w-full">
-                </div>
-                <div class="w-[25vw] flex justify-center px-4">
-                    <img src="assets/images/clients/client5.png" alt="Client 5" class="h-16 w-auto object-contain max-w-full">
-                </div>
-                <div class="w-[25vw] flex justify-center px-4">
-                    <img src="assets/images/clients/client6.png" alt="Client 6" class="h-16 w-auto object-contain max-w-full">
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-</div>
 
 
         </div>
@@ -772,7 +798,8 @@
                     </span>
                     <h2 class="font-heading text-3xl md:text-4xl font-bold text-slate-900 mb-6">
                         Ready to start your <br>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-br from-[#27bcce] to-[#032f7a]">Digital
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-br from-[#27bcce] to-[#032f7a]">Digital
                             Transformation?</span>
                     </h2>
                     <p class="text-slate-600 text-lg mb-8 leading-relaxed">

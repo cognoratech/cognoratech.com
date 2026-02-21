@@ -12,21 +12,43 @@ document.addEventListener("DOMContentLoaded", () => {
     /* ======================================================
        2. MOBILE MENU TOGGLE (Smooth Slide)
     ====================================================== */
+    const iconHamburger = document.getElementById("iconHamburger");
+    const iconClose = document.getElementById("iconClose");
+    const mobileMenuCloseBtn = document.getElementById("mobileMenuCloseBtn");
+
+    function openMobileMenu() {
+        mobileMenu.classList.remove("-translate-y-[150%]");
+        if (iconHamburger && iconClose) {
+            iconHamburger.classList.add("opacity-0", "rotate-90");
+            iconHamburger.classList.remove("opacity-100", "rotate-0");
+            iconClose.classList.remove("opacity-0", "rotate-90");
+            iconClose.classList.add("opacity-100", "rotate-0");
+        }
+    }
+
+    function closeMobileMenu() {
+        mobileMenu.classList.add("-translate-y-[150%]");
+        if (iconHamburger && iconClose) {
+            iconHamburger.classList.remove("opacity-0", "rotate-90");
+            iconHamburger.classList.add("opacity-100", "rotate-0");
+            iconClose.classList.add("opacity-0", "rotate-90");
+            iconClose.classList.remove("opacity-100", "rotate-0");
+        }
+    }
+
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener("click", () => {
             const isClosed = mobileMenu.classList.contains("-translate-y-[150%]");
-            if (isClosed) {
-                mobileMenu.classList.remove("-translate-y-[150%]");
-            } else {
-                mobileMenu.classList.add("-translate-y-[150%]");
-            }
+            isClosed ? openMobileMenu() : closeMobileMenu();
         });
+
+        if (mobileMenuCloseBtn) {
+            mobileMenuCloseBtn.addEventListener("click", closeMobileMenu);
+        }
 
         // Close menu when clicking a link
         mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add("-translate-y-[150%]");
-            });
+            link.addEventListener('click', closeMobileMenu);
         });
     }
 
@@ -40,9 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (link.getAttribute("href") === currentPath) {
             link.classList.add("text-brand-600", "font-bold");
         }
-        
+
         // Smooth scroll for anchor links
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             if (href.startsWith('#') && href.length > 1) {
                 // Remove active class from all
@@ -93,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const runCounterAnimation = (counter) => {
         const target = +counter.getAttribute('data-target');
         const speed = 200; // Adjust speed (higher = slower)
-        
+
         const updateCount = () => {
             const count = +counter.innerText;
             const inc = target / speed;
@@ -143,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ====================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
-    
+
     // Select Elements
     const form = document.getElementById('quoteForm');
     const modal = document.getElementById('thankYouModal');
@@ -168,25 +190,25 @@ document.addEventListener("DOMContentLoaded", function () {
                 method: 'POST',
                 body: formData
             })
-            .then(async (response) => {
-                if (response.status === 200) {
-                    // Success! Show Modal
-                    showModal();
-                    form.reset(); // Clear the form
-                } else {
-                    console.log("Error", response);
+                .then(async (response) => {
+                    if (response.status === 200) {
+                        // Success! Show Modal
+                        showModal();
+                        form.reset(); // Clear the form
+                    } else {
+                        console.log("Error", response);
+                        alert("Something went wrong. Please try again later.");
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
                     alert("Something went wrong. Please try again later.");
-                }
-            })
-            .catch(error => {
-                console.log(error);
-                alert("Something went wrong. Please try again later.");
-            })
-            .finally(() => {
-                // Reset button
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            });
+                })
+                .finally(() => {
+                    // Reset button
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                });
         });
     }
 

@@ -84,40 +84,57 @@
 
     <div id="scrollProgress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-600 to-accent z-[100] w-0 transition-all duration-200"></div>
 
-    <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-transparent">
+  <header id="navbar"
+        class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-transparent">
         <nav class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            
-            <a href="index.html" class="flex items-center gap-2 group">
-                <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-105 transition-transform">
-                    C
-                </div>
-                <span class="font-heading font-bold text-2xl text-brand-900">
-                    Cognora<span class="text-brand-600">Tech</span>
-                </span>
+            <a href="index.html" class="block group">
+                <img id="navLogo" src="assets/images/logo-nobg.png" alt="Cognora Technologies"
+                    class="h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
             </a>
-
             <div class="hidden md:flex items-center gap-8">
-                <a href="index.html" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Home</a>
-                <a href="about.html" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">About</a>
-                <a href="services.html" class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Services</a>
-                <a href="process.html" class="text-sm font-medium text-brand-600 font-bold transition-colors">Process</a>
-                <a href="contact.html" class="px-5 py-2.5 bg-brand-900 text-white text-sm font-medium rounded-full hover:bg-brand-700 transition-all shadow-lg hover:shadow-brand-500/25">
-                    Contact Us
+                <a href="index.html"
+                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Home</a>
+                <a href="about.html"
+                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">About</a>
+                <a href="services.html"
+                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Services</a>
+                <a href="careers.html"
+                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Careers</a>
+                <a href="contact.html"
+                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Contact</a>
+                <a href="#get-in-touch"
+                    class="px-5 py-2.5 bg-brand-900 text-white text-sm font-medium rounded-full hover:bg-brand-700 transition-all shadow-lg hover:shadow-brand-500/25">
+                    Get a Quote
                 </a>
             </div>
-
-            <button id="menuBtn" class="md:hidden p-2 text-slate-800 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <button id="menuBtn"
+                class="md:hidden p-2 text-slate-800 focus:outline-none relative w-10 h-10 flex items-center justify-center"
+                aria-label="Toggle menu">
+                <!-- Hamburger Icon -->
+                <svg id="iconHamburger" class="w-6 h-6 absolute transition-all duration-300 opacity-100 rotate-0"
+                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+                <!-- Close (X) Icon -->
+                <svg id="iconClose" class="w-6 h-6 absolute transition-all duration-300 opacity-0 rotate-90" fill="none"
+                    stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
             </button>
         </nav>
-
-        <div id="mobileMenu" class="absolute top-full left-0 w-full bg-white border-b shadow-lg transform -translate-y-[150%] transition-transform duration-300 md:hidden -z-10">
+        <div id="mobileMenu"
+            class="absolute top-full left-0 w-full bg-white border-b shadow-lg transform -translate-y-[150%] transition-transform duration-300 md:hidden -z-10">
             <div class="flex flex-col p-6 gap-4 font-medium">
+                <!-- Mobile Menu Header with Close Button -->
+               
+                <hr class="border-slate-100 -mt-1">
                 <a href="index.html" class="mobile-link">Home</a>
                 <a href="about.html" class="mobile-link">About</a>
                 <a href="services.html" class="mobile-link">Services</a>
-                <a href="process.html" class="mobile-link text-brand-600">Process</a>
-                <a href="contact.html" class="w-full text-center py-3 bg-brand-600 text-white rounded-lg">Contact Us</a>
+                <a href="careers.html" class="mobile-link">Careers</a>
+                <a href="contact.html" class="w-full text-center py-3 bg-brand-600 text-white rounded-lg">Get Quote</a>
             </div>
         </div>
     </header>
