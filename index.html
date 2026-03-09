@@ -84,37 +84,39 @@
     </style>
 </head>
 
-<body class="font-sans text-slate-600 antialiased overflow-x-hidden selection:bg-brand-600 selection:text-white">
+<body
+    class="font-sans text-slate-700 antialiased bg-slate-950/5 overflow-x-hidden selection:bg-brand-600 selection:text-white">
     <!-- Navbar -->
     <div id="scrollProgress"
         class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-600 to-accent z-[100] w-0 transition-all duration-200">
     </div>
 
     <header id="navbar"
-        class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-transparent">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <a href="index.html" class="block group">
+        class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-white/80 backdrop-blur-xl transition-all duration-300">
+        <nav class="max-w-7xl mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
+            <a href="index.html" class="flex items-center gap-2 group">
                 <img id="navLogo" src="assets/images/logo-nobg.png" alt="Cognora Technologies"
-                    class="h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+                    class="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-110">
             </a>
             <div class="hidden md:flex items-center gap-8">
                 <a href="index.html"
-                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Home</a>
+                    class="text-xs font-medium uppercase tracking-[0.16em] text-slate-500 hover:text-slate-900 transition-colors">Home</a>
                 <a href="about.html"
-                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">About</a>
+                    class="text-xs font-medium uppercase tracking-[0.16em] text-slate-500 hover:text-slate-900 transition-colors">About</a>
                 <a href="services.html"
-                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Services</a>
+                    class="text-xs font-medium uppercase tracking-[0.16em] text-slate-500 hover:text-slate-900 transition-colors">Services</a>
                 <a href="careers.html"
-                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Careers</a>
+                    class="text-xs font-medium uppercase tracking-[0.16em] text-slate-500 hover:text-slate-900 transition-colors">Careers</a>
                 <a href="contact.html"
-                    class="text-sm font-medium text-slate-700 hover:text-brand-600 transition-colors">Contact</a>
+                    class="text-xs font-medium uppercase tracking-[0.16em] text-slate-500 hover:text-slate-900 transition-colors">Contact</a>
                 <a href="#get-in-touch"
-                    class="px-5 py-2.5 bg-brand-900 text-white text-sm font-medium rounded-full hover:bg-brand-700 transition-all shadow-lg hover:shadow-brand-500/25">
-                    Get a Quote
+                    class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-sm shadow-slate-900/20 transition hover:-translate-y-0.5 hover:bg-slate-800">
+                    Get a quote
+                    <span class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
                 </a>
             </div>
             <button id="menuBtn"
-                class="md:hidden p-2 text-slate-800 focus:outline-none relative w-10 h-10 flex items-center justify-center"
+                class="md:hidden flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800 shadow-sm focus:outline-none relative"
                 aria-label="Toggle menu">
                 <!-- Hamburger Icon -->
                 <svg id="iconHamburger" class="w-6 h-6 absolute transition-all duration-300 opacity-100 rotate-0"
@@ -131,114 +133,141 @@
             </button>
         </nav>
         <div id="mobileMenu"
-            class="absolute top-full left-0 w-full bg-white border-b shadow-lg transform -translate-y-[150%] transition-transform duration-300 md:hidden -z-10">
-            <div class="flex flex-col p-6 gap-4 font-medium">
-                <!-- Mobile Menu Header with Close Button -->
-               
-                <hr class="border-slate-100 -mt-1">
-                <a href="index.html" class="mobile-link">Home</a>
-                <a href="about.html" class="mobile-link">About</a>
-                <a href="services.html" class="mobile-link">Services</a>
-                <a href="careers.html" class="mobile-link">Careers</a>
-                <a href="contact.html" class="w-full text-center py-3 bg-brand-600 text-white rounded-lg">Get Quote</a>
+            class="absolute top-full left-0 w-full -translate-y-[150%] border-b border-slate-200 bg-white/95 shadow-lg transition-transform duration-300 md:hidden -z-10">
+            <div class="flex flex-col gap-2 p-4 text-sm">
+                <hr class="border-slate-100 -mt-1 mb-1">
+                <a href="index.html" class="mobile-link rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50">Home</a>
+                <a href="about.html" class="mobile-link rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50">About</a>
+                <a href="services.html"
+                    class="mobile-link rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50">Services</a>
+                <a href="careers.html"
+                    class="mobile-link rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50">Careers</a>
+                <a href="contact.html"
+                    class="mt-2 w-full rounded-lg bg-slate-900 px-3 py-2 text-center text-sm font-semibold text-white hover:bg-slate-800">
+                    Get quote
+                </a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+    <section id="home" class="relative overflow-hidden pt-28 pb-20 sm:pt-32 sm:pb-24">
         <div
-            class="absolute inset-0 -z-10 bg-brand-50/50 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent)]">
+            class="pointer-events-none absolute inset-0 -z-10 bg-brand-50/60 bg-grid-pattern [mask-image:linear-gradient(to_bottom,white,transparent)]">
         </div>
         <div
-            class="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl">
+            class="pointer-events-none absolute -right-24 top-[-8rem] h-80 w-80 rounded-full bg-cyan-400/15 blur-3xl sm:h-96 sm:w-96">
         </div>
         <div
-            class="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-accent/10 rounded-full blur-3xl">
+            class="pointer-events-none absolute -left-24 bottom-[-8rem] h-80 w-80 rounded-full bg-indigo-700/15 blur-3xl sm:h-96 sm:w-96">
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <div
+            class="mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 sm:px-6 lg:grid lg:grid-cols-[minmax(0,1.2fr),minmax(0,1fr)] lg:items-center lg:px-8">
 
-            <div data-aos="fade-right" data-aos-duration="1000">
+            <div class="max-w-xl space-y-7 text-center lg:text-left" data-aos="fade-right" data-aos-duration="900">
                 <div
-                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-brand-700 text-xs font-semibold mb-6 border border-blue-200">
+                    class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500 shadow-sm backdrop-blur">
                     <span class="relative flex h-2 w-2">
                         <span
-                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                            class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60"></span>
+                        <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
                     </span>
-                    Top-rated IT Agency
+                    Top-rated IT partner
                 </div>
-                <h1 class="font-heading text-4xl lg:text-6xl font-bold text-brand-900 leading-[1.1] mb-6">
-                    Turn Your Ideas Into <br>
-                    <span class="text-gradient bg-gradient-to-br from-[#27bcce] to-[#032f7a]">Digital Reality</span>
+
+                <h1
+                    class="font-heading text-3xl leading-tight text-slate-900 sm:text-4xl md:text-5xl lg:text-[3.2rem] lg:leading-[1.05]">
+                    Turn your ideas into
+                    <span
+                        class="block bg-gradient-to-br from-[#27bcce] via-[#2563eb] to-[#032f7a] bg-clip-text text-transparent">
+                        high‑performing digital products
+                    </span>
                 </h1>
-                <p class="text-lg text-slate-600 mb-8 leading-relaxed max-w-lg">
-                    We build high-performance websites, mobile apps, and digital strategies that drive growth for
-                    startups and enterprises.
+
+                <p class="text-sm leading-relaxed text-slate-600 sm:text-base">
+                    We build fast, reliable websites, mobile apps, and digital strategies that help startups and
+                    enterprises launch, scale, and stay ahead.
                 </p>
 
-                <div class="flex flex-wrap items-center gap-4 mt-8">
-
+                <div class="flex flex-wrap items-center justify-center gap-3 pt-2 lg:justify-start">
                     <a href="services.html"
-                        class="px-8 py-4 rounded-full bg-gradient-to-br from-[#27bcce] to-[#032f7a] text-white font-bold shadow-lg shadow-brand-500/30 hover:bg-brand-700 hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 group">
-                        Explore Services
-                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform text-sm"></i>
+                        class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-slate-900/25 transition hover:-translate-y-0.5 hover:bg-slate-800">
+                        Explore services
+                        <i class="fas fa-arrow-right text-xs"></i>
                     </a>
-
                     <a href="about.html"
-                        class="px-8 py-4 rounded-full bg-white border border-slate-200 text-slate-600 font-bold hover:border-brand-600 hover:text-brand-600 hover:shadow-lg transition-all duration-300 flex items-center gap-2 group">
-                        Who We Are
-                        <i class="fas fa-info-circle text-slate-400 group-hover:text-brand-600 transition-colors"></i>
+                        class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white">
+                        Meet the team
+                        <i class="fas fa-circle-info text-slate-400"></i>
                     </a>
+                </div>
 
+                <div
+                    class="flex flex-wrap items-center justify-center gap-4 pt-4 text-xs text-slate-500 lg:justify-start">
+                    <div class="flex items-center gap-2">
+                        <div class="flex -space-x-2">
+                            <span
+                                class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-slate-200 text-[10px] font-semibold text-slate-600">A</span>
+                            <span
+                                class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-slate-200 text-[10px] font-semibold text-slate-600">B</span>
+                            <span
+                                class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-slate-200 text-[10px] font-semibold text-slate-600">C</span>
+                        </div>
+                        <span>Trusted by 30+ growing teams</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-brand-600 rounded-2xl blur opacity-30">
+            <div class="relative w-full max-w-md lg:justify-self-end" data-aos="fade-left" data-aos-duration="900"
+                data-aos-delay="120">
+                <div class="absolute -inset-1 rounded-2xl bg-gradient-to-br from-cyan-400/40 to-brand-600/40 blur-xl">
                 </div>
 
                 <div
-                    class="relative bg-gradient-to-br from-[#27bcce] to-[#032f7a] rounded-2xl p-8 shadow-2xl border border-white/20 backdrop-blur-sm">
-                    <div class="text-center mb-6">
-                        <h3 class="font-heading text-2xl font-bold text-white">Get a Free Quote</h3>
-                        <p class="text-white/80 text-sm mt-1">Fill out the form and we'll get back to you within 24
-                            hours.</p>
+                    class="relative rounded-2xl border border-white/20 bg-slate-950/80 p-6 shadow-2xl backdrop-blur-xl sm:p-7">
+                    <div class="mb-5 space-y-1 text-center">
+                        <h3 class="font-heading text-xl font-semibold text-white">
+                            Start with a free consultation
+                        </h3>
+                        <p class="text-xs text-slate-300">
+                            Share a few details and we’ll respond within 24 hours.
+                        </p>
                     </div>
 
-                    <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                        <input type="hidden" name="access_key" value="4db9d95d-8052-4af5-a0dc-34dbaccd3303">
-
+                    <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST"
+                        class="space-y-3 text-left">
+                        <input type="hidden" name="access_key" value="ff3f1138-b3a3-41dc-bd4d-8bc16f05d8e0">
                         <input type="hidden" name="redirect" value="https://cognoratech.com/thank-you.html">
 
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="space-y-1">
-                                <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Name</label>
-                                <input type="text" name="name" placeholder="Your Name" required
-                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white placeholder-white/40 backdrop-blur-md hover:border-white/40">
+                        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                            <div class="space-y-1.5">
+                                <label
+                                    class="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-200">Name</label>
+                                <input type="text" name="name" placeholder="Jane Doe" required
+                                    class="w-full rounded-lg border border-slate-600/60 bg-slate-900/60 px-3 py-2.5 text-sm text-white placeholder:text-slate-400 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/40">
                             </div>
-                            <div class="space-y-1">
-                                <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Phone</label>
+                            <div class="space-y-1.5">
+                                <label
+                                    class="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-200">Phone</label>
                                 <input type="tel" name="phone" placeholder="+91..." required
-                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white placeholder-white/40 backdrop-blur-md hover:border-white/40">
+                                    class="w-full rounded-lg border border-slate-600/60 bg-slate-900/60 px-3 py-2.5 text-sm text-white placeholder:text-slate-400 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/40">
                             </div>
                         </div>
 
-                        <div class="space-y-1">
-                            <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Email
-                                Address</label>
-                            <input type="email" name="email" placeholder="Your Email " required
-                                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white placeholder-white/40 backdrop-blur-md hover:border-white/40">
+                        <div class="space-y-1.5">
+                            <label
+                                class="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-200">Email</label>
+                            <input type="email" name="email" placeholder="you@company.com" required
+                                class="w-full rounded-lg border border-slate-600/60 bg-slate-900/60 px-3 py-2.5 text-sm text-white placeholder:text-slate-400 focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/40">
                         </div>
 
-                        <div class="space-y-1">
-                            <label class="text-[11px] font-bold text-white/90 uppercase tracking-wide">Service
-                                Needed</label>
+                        <div class="space-y-1.5">
+                            <label class="text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-200">Service
+                                needed</label>
                             <select name="service"
-                                class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:ring-2 focus:ring-white/50 focus:border-white outline-none transition-all text-sm text-white backdrop-blur-md hover:border-white/40">
-                                <option value="" disabled selected class="text-slate-500">Select a service...
-                                </option>
+                                class="w-full rounded-lg border border-slate-600/60 bg-slate-900/60 px-3 py-2.5 text-sm text-white focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/40">
+                                <option value="" disabled selected class="text-slate-500">Select a service…</option>
                                 <option value="Web Development" class="text-slate-900">Web Development</option>
                                 <option value="Mobile App Development" class="text-slate-900">Mobile App Development
                                 </option>
@@ -250,13 +279,14 @@
                         </div>
 
                         <button type="submit"
-                            class="w-full py-4 bg-white text-[#032f7a] font-bold rounded-lg hover:bg-cyan-50 transition-all shadow-lg hover:shadow-cyan-500/20 flex justify-center items-center gap-2 group mt-2">
-                            <span>Request Consultation</span>
-                            <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                            class="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-white px-4 py-3 text-sm font-semibold text-slate-900 shadow-md shadow-cyan-500/15 transition hover:-translate-y-0.5 hover:bg-slate-100">
+                            Request consultation
+                            <i class="fas fa-arrow-right text-xs"></i>
                         </button>
 
-                        <p class="text-center text-xs text-white/60 mt-3">
-                            <i class="fas fa-lock text-[10px]"></i> Your data is secure. No spam.
+                        <p class="pt-1 text-center text-[11px] text-slate-400">
+                            <i class="fas fa-lock text-[10px]"></i>
+                            We’ll only use your details to contact you about this request.
                         </p>
                     </form>
                 </div>
@@ -683,63 +713,83 @@
     </section>
     <!-- How We Work Section -->
     <section id="process" class="py-24 bg-slate-950 text-white relative overflow-hidden">
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(39,188,206,0.1)_0%,transparent_70%)] pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <div class="text-center mb-20">
-            <h2 class="font-heading text-4xl md:text-5xl font-bold tracking-tight">
-                How We <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Work</span>
-            </h2>
-            <p class="text-slate-400 mt-4 max-w-xl mx-auto text-lg">
-                A streamlined, four-step framework designed to take your idea from concept to a high-performing reality.
-            </p>
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(39,188,206,0.1)_0%,transparent_70%)] pointer-events-none">
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
-            <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 border-t-2 border-dashed border-slate-800 -translate-y-1/2 z-0"></div>
-
-            <div class="relative group" data-aos="fade-up">
-                <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 relative z-10 group-hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/20">
-                        <span class="text-2xl font-bold">01</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">Discovery</h3>
-                    <p class="text-slate-400 leading-relaxed">We deep dive into your business goals, requirements, and key challenges to align our strategy.</p>
-                </div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold tracking-tight">
+                    How We <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Work</span>
+                </h2>
+                <p class="text-slate-400 mt-4 max-w-xl mx-auto text-lg">
+                    A streamlined, four-step framework designed to take your idea from concept to a high-performing
+                    reality.
+                </p>
             </div>
 
-            <div class="relative group" data-aos="fade-up" data-aos-delay="100">
-                <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 relative z-10 group-hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/20">
-                        <span class="text-2xl font-bold">02</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">Plan & Design</h3>
-                    <p class="text-slate-400 leading-relaxed">Defining project scope, user journeys, and crafting a modern visual architecture.</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+                <div
+                    class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 border-t-2 border-dashed border-slate-800 -translate-y-1/2 z-0">
                 </div>
-            </div>
 
-            <div class="relative group" data-aos="fade-up" data-aos-delay="200">
-                <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 relative z-10 group-hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/20">
-                        <span class="text-2xl font-bold">03</span>
+                <div class="relative group" data-aos="fade-up">
+                    <div
+                        class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 relative z-10 group-hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/20">
+                            <span class="text-2xl font-bold">01</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">Discovery</h3>
+                        <p class="text-slate-400 leading-relaxed">We deep dive into your business goals, requirements,
+                            and key challenges to align our strategy.</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">Development</h3>
-                    <p class="text-slate-400 leading-relaxed">Our engineers build scalable, secure, and lightning-fast solutions using modern tech stacks.</p>
                 </div>
-            </div>
 
-            <div class="relative group" data-aos="fade-up" data-aos-delay="300">
-                <div class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 relative z-10 group-hover:-translate-y-2">
-                    <div class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/20">
-                        <span class="text-2xl font-bold">04</span>
+                <div class="relative group" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 relative z-10 group-hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/20">
+                            <span class="text-2xl font-bold">02</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">Plan & Design
+                        </h3>
+                        <p class="text-slate-400 leading-relaxed">Defining project scope, user journeys, and crafting a
+                            modern visual architecture.</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">Launch & Support</h3>
-                    <p class="text-slate-400 leading-relaxed">Rigorous testing followed by a smooth deployment and long-term proactive maintenance.</p>
+                </div>
+
+                <div class="relative group" data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 relative z-10 group-hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/20">
+                            <span class="text-2xl font-bold">03</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">Development</h3>
+                        <p class="text-slate-400 leading-relaxed">Our engineers build scalable, secure, and
+                            lightning-fast solutions using modern tech stacks.</p>
+                    </div>
+                </div>
+
+                <div class="relative group" data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="bg-slate-900/50 border border-slate-800 p-8 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 relative z-10 group-hover:-translate-y-2">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/20">
+                            <span class="text-2xl font-bold">04</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">Launch & Support
+                        </h3>
+                        <p class="text-slate-400 leading-relaxed">Rigorous testing followed by a smooth deployment and
+                            long-term proactive maintenance.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <!-- what our client says-->
     <section class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6">
@@ -856,7 +906,7 @@
                         </div>
 
                         <form id="quoteForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
-                            <input type="hidden" name="access_key" value="4db9d95d-8052-4af5-a0dc-34dbaccd3303">
+                            <input type="hidden" name="access_key" value="ff3f1138-b3a3-41dc-bd4d-8bc16f05d8e0">
 
                             <input type="hidden" name="redirect" value="https://cognoratech.com/thank-you.html">
 

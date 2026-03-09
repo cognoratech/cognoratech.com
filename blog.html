@@ -12,7 +12,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -48,11 +50,23 @@
 
     <style>
         /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
-        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
         /* Grid Pattern */
         .bg-grid-pattern {
             background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
@@ -63,14 +77,16 @@
 
 <body class="font-sans text-slate-600 antialiased overflow-x-hidden selection:bg-brand-600 selection:text-white">
 
-    <div id="scrollProgress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-600 to-accent z-[100] w-0 transition-all duration-200"></div>
+    <div id="scrollProgress"
+        class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-600 to-accent z-[100] w-0 transition-all duration-200">
+    </div>
 
-   <header id="navbar"
+    <header id="navbar"
         class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-transparent">
-        <nav class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+        <nav class="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
             <a href="index.html" class="block group">
                 <img id="navLogo" src="assets/images/logo-nobg.png" alt="Cognora Technologies"
-                    class="h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300">
+                    class="h-20 w-auto object-contain group-hover:scale-110 transition-transform duration-300">
             </a>
             <div class="hidden md:flex items-center gap-8">
                 <a href="index.html"
@@ -109,7 +125,7 @@
             class="absolute top-full left-0 w-full bg-white border-b shadow-lg transform -translate-y-[150%] transition-transform duration-300 md:hidden -z-10">
             <div class="flex flex-col p-6 gap-4 font-medium">
                 <!-- Mobile Menu Header with Close Button -->
-               
+
                 <hr class="border-slate-100 -mt-1">
                 <a href="index.html" class="mobile-link">Home</a>
                 <a href="about.html" class="mobile-link">About</a>
@@ -134,12 +150,14 @@
 
     <section class="py-12">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden grid lg:grid-cols-2 group" data-aos="fade-up">
+            <div class="bg-white rounded-3xl shadow-lg border border-slate-100 overflow-hidden grid lg:grid-cols-2 group"
+                data-aos="fade-up">
                 <div class="relative h-64 lg:h-auto overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-                         alt="AI Technology" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute top-4 left-4 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full">FEATURED</div>
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                        alt="AI Technology"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    <div class="absolute top-4 left-4 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        FEATURED</div>
                 </div>
                 <div class="p-8 lg:p-12 flex flex-col justify-center">
                     <div class="flex items-center gap-2 text-sm text-slate-400 mb-4">
@@ -147,13 +165,16 @@
                         <span>•</span>
                         <span class="text-brand-600 font-medium">Artificial Intelligence</span>
                     </div>
-                    <h2 class="font-heading text-2xl lg:text-3xl font-bold text-brand-900 mb-4 hover:text-brand-600 transition-colors">
+                    <h2
+                        class="font-heading text-2xl lg:text-3xl font-bold text-brand-900 mb-4 hover:text-brand-600 transition-colors">
                         <a href="#">Building Smarter Apps with Spring AI and Java</a>
                     </h2>
                     <p class="text-slate-600 mb-6 leading-relaxed">
-                        Discover how the new Spring AI framework is revolutionizing Java development by making it easier than ever to integrate Large Language Models (LLMs) into your enterprise applications.
+                        Discover how the new Spring AI framework is revolutionizing Java development by making it easier
+                        than ever to integrate Large Language Models (LLMs) into your enterprise applications.
                     </p>
-                    <a href="#" class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:gap-3 transition-all">
+                    <a href="#"
+                        class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:gap-3 transition-all">
                         Read Article <i class="fas fa-arrow-right text-sm"></i>
                     </a>
                 </div>
@@ -163,58 +184,81 @@
 
     <section class="py-12 pb-24">
         <div class="max-w-7xl mx-auto px-6">
-            
+
             <div class="flex flex-wrap gap-2 mb-10">
                 <button class="px-4 py-1.5 rounded-full bg-brand-900 text-white text-sm font-medium">All</button>
-                <button class="px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition">Development</button>
-                <button class="px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition">Cloud</button>
-                <button class="px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition">Design</button>
+                <button
+                    class="px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition">Development</button>
+                <button
+                    class="px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition">Cloud</button>
+                <button
+                    class="px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-600 text-sm font-medium hover:bg-slate-50 transition">Design</button>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-glow transition-all duration-300 group" data-aos="fade-up" data-aos-delay="0">
+
+                <article
+                    class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-glow transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="0">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Coding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">DevOps</span>
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Coding"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">DevOps</span>
                     </div>
                     <div class="p-6">
                         <div class="text-xs text-slate-400 mb-3">Oct 10, 2025 • 5 min read</div>
-                        <h3 class="font-heading text-xl font-bold text-brand-900 mb-3 group-hover:text-brand-600 transition-colors">
+                        <h3
+                            class="font-heading text-xl font-bold text-brand-900 mb-3 group-hover:text-brand-600 transition-colors">
                             <a href="#">Why Microservices? A Spring Boot Perspective</a>
                         </h3>
                         <p class="text-sm text-slate-500 mb-4 line-clamp-2">
-                            Breaking down monolithic architectures into scalable microservices using Spring Boot and Spring Cloud.
+                            Breaking down monolithic architectures into scalable microservices using Spring Boot and
+                            Spring Cloud.
                         </p>
                         <a href="#" class="text-sm font-semibold text-brand-600 hover:underline">Read More</a>
                     </div>
                 </article>
 
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-glow transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                <article
+                    class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-glow transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="100">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">UI/UX</span>
+                        <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Design"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">UI/UX</span>
                     </div>
                     <div class="p-6">
                         <div class="text-xs text-slate-400 mb-3">Sep 28, 2025 • 4 min read</div>
-                        <h3 class="font-heading text-xl font-bold text-brand-900 mb-3 group-hover:text-brand-600 transition-colors">
+                        <h3
+                            class="font-heading text-xl font-bold text-brand-900 mb-3 group-hover:text-brand-600 transition-colors">
                             <a href="#">The Future of Web Design in 2026</a>
                         </h3>
                         <p class="text-sm text-slate-500 mb-4 line-clamp-2">
-                            Exploring glassmorphism, dark mode standardization, and AI-generated assets in modern web interfaces.
+                            Exploring glassmorphism, dark mode standardization, and AI-generated assets in modern web
+                            interfaces.
                         </p>
                         <a href="#" class="text-sm font-semibold text-brand-600 hover:underline">Read More</a>
                     </div>
                 </article>
 
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-glow transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                <article
+                    class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-glow transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cloud" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">Cloud</span>
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Cloud"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">Cloud</span>
                     </div>
                     <div class="p-6">
                         <div class="text-xs text-slate-400 mb-3">Sep 15, 2025 • 6 min read</div>
-                        <h3 class="font-heading text-xl font-bold text-brand-900 mb-3 group-hover:text-brand-600 transition-colors">
+                        <h3
+                            class="font-heading text-xl font-bold text-brand-900 mb-3 group-hover:text-brand-600 transition-colors">
                             <a href="#">Scaling Applications on AWS</a>
                         </h3>
                         <p class="text-sm text-slate-500 mb-4 line-clamp-2">
@@ -224,14 +268,20 @@
                     </div>
                 </article>
 
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-glow transition-all duration-300 group" data-aos="fade-up" data-aos-delay="0">
+                <article
+                    class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-glow transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="0">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mobile" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">Mobile</span>
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Mobile"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">Mobile</span>
                     </div>
                     <div class="p-6">
                         <div class="text-xs text-slate-400 mb-3">Sep 01, 2025 • 5 min read</div>
-                        <h3 class="font-heading text-xl font-bold text-brand-900 mb-3 group-hover:text-brand-600 transition-colors">
+                        <h3
+                            class="font-heading text-xl font-bold text-brand-900 mb-3 group-hover:text-brand-600 transition-colors">
                             <a href="#">Flutter vs React Native: 2026 Edition</a>
                         </h3>
                         <p class="text-sm text-slate-500 mb-4 line-clamp-2">
@@ -241,14 +291,20 @@
                     </div>
                 </article>
 
-                 <article class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-glow transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                <article
+                    class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-glow transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="100">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Security" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">Security</span>
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Security"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">Security</span>
                     </div>
                     <div class="p-6">
                         <div class="text-xs text-slate-400 mb-3">Aug 20, 2025 • 7 min read</div>
-                        <h3 class="font-heading text-xl font-bold text-brand-900 mb-3 group-hover:text-brand-600 transition-colors">
+                        <h3
+                            class="font-heading text-xl font-bold text-brand-900 mb-3 group-hover:text-brand-600 transition-colors">
                             <a href="#">Securing APIs with OAuth2</a>
                         </h3>
                         <p class="text-sm text-slate-500 mb-4 line-clamp-2">
@@ -258,14 +314,20 @@
                     </div>
                 </article>
 
-                <article class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-glow transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                <article
+                    class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-glow transition-all duration-300 group"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="h-48 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Team" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <span class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">Culture</span>
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                            alt="Team"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">Culture</span>
                     </div>
                     <div class="p-6">
                         <div class="text-xs text-slate-400 mb-3">Aug 10, 2025 • 3 min read</div>
-                        <h3 class="font-heading text-xl font-bold text-brand-900 mb-3 group-hover:text-brand-600 transition-colors">
+                        <h3
+                            class="font-heading text-xl font-bold text-brand-900 mb-3 group-hover:text-brand-600 transition-colors">
                             <a href="#">Cognora Tech: One Year Journey</a>
                         </h3>
                         <p class="text-sm text-slate-500 mb-4 line-clamp-2">
@@ -278,25 +340,35 @@
             </div>
 
             <div class="flex justify-center mt-16 gap-2">
-                <button class="w-10 h-10 rounded-lg flex items-center justify-center border border-slate-200 text-slate-500 hover:bg-slate-50"><</button>
-                <button class="w-10 h-10 rounded-lg flex items-center justify-center bg-brand-600 text-white font-bold">1</button>
-                <button class="w-10 h-10 rounded-lg flex items-center justify-center border border-slate-200 text-slate-600 hover:bg-slate-50">2</button>
-                <button class="w-10 h-10 rounded-lg flex items-center justify-center border border-slate-200 text-slate-600 hover:bg-slate-50">3</button>
-                <button class="w-10 h-10 rounded-lg flex items-center justify-center border border-slate-200 text-slate-500 hover:bg-slate-50">></button>
+                <button
+                    class="w-10 h-10 rounded-lg flex items-center justify-center border border-slate-200 text-slate-500 hover:bg-slate-50">
+                    << /button>
+                        <button
+                            class="w-10 h-10 rounded-lg flex items-center justify-center bg-brand-600 text-white font-bold">1</button>
+                        <button
+                            class="w-10 h-10 rounded-lg flex items-center justify-center border border-slate-200 text-slate-600 hover:bg-slate-50">2</button>
+                        <button
+                            class="w-10 h-10 rounded-lg flex items-center justify-center border border-slate-200 text-slate-600 hover:bg-slate-50">3</button>
+                        <button
+                            class="w-10 h-10 rounded-lg flex items-center justify-center border border-slate-200 text-slate-500 hover:bg-slate-50">></button>
             </div>
 
         </div>
     </section>
 
     <section class="py-20 bg-brand-900 text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+        <div
+            class="absolute top-0 right-0 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2">
+        </div>
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
             <h2 class="font-heading text-3xl font-bold mb-4">Stay Updated with Cognora</h2>
             <p class="text-slate-400 mb-8">Get the latest tech trends and company news delivered to your inbox.</p>
-            
+
             <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-                <input type="email" placeholder="Enter your email" class="flex-1 px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 transition-colors">
-                <button class="px-8 py-3 bg-brand-600 text-white font-bold rounded-lg hover:bg-brand-500 transition-colors">Subscribe</button>
+                <input type="email" placeholder="Enter your email"
+                    class="flex-1 px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 transition-colors">
+                <button
+                    class="px-8 py-3 bg-brand-600 text-white font-bold rounded-lg hover:bg-brand-500 transition-colors">Subscribe</button>
             </form>
         </div>
     </section>
@@ -306,10 +378,11 @@
             <div class="col-span-1 md:col-span-1">
                 <h3 class="text-2xl font-bold text-white mb-6">Cognora<span class="text-brand-500">Tech</span></h3>
                 <p class="text-sm leading-relaxed text-slate-400">
-                    Delivering innovative, scalable, and reliable IT solutions to help businesses grow in the digital era.
+                    Delivering innovative, scalable, and reliable IT solutions to help businesses grow in the digital
+                    era.
                 </p>
             </div>
-            
+
             <div>
                 <h4 class="text-white font-bold mb-6">Quick Links</h4>
                 <ul class="space-y-3 text-sm">
@@ -340,7 +413,8 @@
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
+        <div
+            class="max-w-7xl mx-auto px-6 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
             <p>&copy; <span id="year"></span> Cognora Technologies Pvt. Ltd.</p>
             <p>Designed by Cognora Tech</p>
         </div>
@@ -353,8 +427,9 @@
         // Dynamic Year
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-    
+
     <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
