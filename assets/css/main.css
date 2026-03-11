@@ -1,0 +1,15 @@
+/* Navigation Link Styling - Clean Text Only */
+.nav-link {
+    @apply text-xs font-medium uppercase tracking-[0.16em] text-slate-500 hover:text-slate-900 transition-colors duration-300 relative;
+}
+
+/* Active Page Highlight (Matches your JS logic) */
+.text-brand-600 {
+    /* Using a dark slate or your specific brand color for the active state */
+    @apply text-slate-900 font-bold !important;
+}
+
+/* Ensure mobile links also look clean */
+.mobile-link {
+    @apply transition-colors duration-200;
+}

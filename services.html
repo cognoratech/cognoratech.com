@@ -92,39 +92,40 @@
     </div>
 
     <header id="navbar"
-        class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-white/80 backdrop-blur-xl transition-all duration-300">
+        class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-white/80 backdrop-blur-xl transition-all duration-500">
         <nav class="max-w-7xl mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
-            <a href="index.html" class="flex items-center gap-2 group">
-                <img id="navLogo" src="assets/images/logo-nobg.png" alt="Cognora Technologies"
-                    class="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-110">
-            </a>
+
+            <div class="flex flex-1 justify-start">
+                <a href="index.html" class="flex items-center gap-2 group">
+                    <img id="navLogo" src="assets/images/logo-nobg.png" alt="Cognora Technologies"
+                        class="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                </a>
+            </div>
+
             <div class="hidden md:flex items-center gap-8">
-                <a href="index.html"
-                    class="text-xs font-medium uppercase tracking-[0.16em] text-slate-500 hover:text-slate-900 transition-colors">Home</a>
-                <a href="about.html"
-                    class="text-xs font-medium uppercase tracking-[0.16em] text-slate-500 hover:text-slate-900 transition-colors">About</a>
-                <a href="services.html"
-                    class="text-xs font-medium uppercase tracking-[0.16em] text-slate-500 hover:text-slate-900 transition-colors">Services</a>
-                <a href="careers.html"
-                    class="text-xs font-medium uppercase tracking-[0.16em] text-slate-500 hover:text-slate-900 transition-colors">Careers</a>
-                <a href="contact.html"
-                    class="text-xs font-medium uppercase tracking-[0.16em] text-slate-500 hover:text-slate-900 transition-colors">Contact</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <div class="hidden md:flex flex-1 justify-end">
                 <a href="#get-in-touch"
-                    class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-white shadow-sm shadow-slate-900/20 transition hover:-translate-y-0.5 hover:bg-slate-800">
+                    class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800">
                     Get a quote
                     <span class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
                 </a>
             </div>
+
             <button id="menuBtn"
-                class="md:hidden flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800 shadow-sm focus:outline-none relative"
+                class="md:hidden flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800 shadow-sm focus:outline-none relative z-[60]"
                 aria-label="Toggle menu">
-                <!-- Hamburger Icon -->
                 <svg id="iconHamburger" class="w-6 h-6 absolute transition-all duration-300 opacity-100 rotate-0"
                     fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
                     </path>
                 </svg>
-                <!-- Close (X) Icon -->
                 <svg id="iconClose" class="w-6 h-6 absolute transition-all duration-300 opacity-0 rotate-90" fill="none"
                     stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
@@ -132,18 +133,18 @@
                 </svg>
             </button>
         </nav>
+
         <div id="mobileMenu"
-            class="absolute top-full left-0 w-full -translate-y-[150%] border-b border-slate-200 bg-white/95 shadow-lg transition-transform duration-300 md:hidden -z-10">
-            <div class="flex flex-col gap-2 p-4 text-sm">
-                <hr class="border-slate-100 -mt-1 mb-1">
-                <a href="index.html" class="mobile-link rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50">Home</a>
-                <a href="about.html" class="mobile-link rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50">About</a>
-                <a href="services.html"
-                    class="mobile-link rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50">Services</a>
-                <a href="careers.html"
-                    class="mobile-link rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50">Careers</a>
-                <a href="contact.html"
-                    class="mt-2 w-full rounded-lg bg-slate-900 px-3 py-2 text-center text-sm font-semibold text-white hover:bg-slate-800">
+            class="fixed inset-0 w-full h-screen bg-white transition-transform duration-500 ease-in-out -translate-y-[150%] md:hidden z-[55]">
+            <div class="flex flex-col items-center justify-center h-full gap-8 p-4">
+                <a href="index.html" class="mobile-link text-2xl font-semibold text-slate-900">Home</a>
+                <a href="about.html" class="mobile-link text-2xl font-semibold text-slate-900">About</a>
+                <a href="services.html" class="mobile-link text-2xl font-semibold text-slate-900">Services</a>
+                <a href="careers.html" class="mobile-link text-2xl font-semibold text-slate-900">Careers</a>
+                <a href="contact.html" class="mobile-link text-2xl font-semibold text-slate-900">Contact</a>
+
+                <a href="#get-in-touch"
+                    class="mt-4 w-64 rounded-full bg-slate-900 px-8 py-4 text-center text-sm font-bold uppercase tracking-widest text-white shadow-xl">
                     Get quote
                 </a>
             </div>
@@ -467,80 +468,95 @@
         </div>
     </section>
     <!-- footer section -->
-    <footer class=" bg-[#031233] text-slate-300 font-sans border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+   <footer style="background:#060a14; border-top:1px solid rgba(255,255,255,.05)">
+        <div class="max-w-7xl mx-auto px-6 py-10 lg:py-12">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-8">
 
-            <div class="space-y-6">
-                <a href="index.html" class="block">
-                    <img src="assets/images/logo-dark.png" alt="Cognora Technologies"
-                        class="h-13 w-auto hover:opacity-100 transition-opacity">
-                </a>
-                <p class="text-sm leading-relaxed text-slate-400">
-                    Innovating intelligence and empowering the future with scalable IT solutions.
-                </p>
-                <div class="flex gap-4">
-                    <a href="https://www.linkedin.com/company/cognora-technologies/"
-                        class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition-all"><i
-                            class="fab fa-linkedin-in"></i></a>
-                    <a href="#"
-                        class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition-all"><i
-                            class="fab fa-twitter"></i></a>
-                    <a href="#"
-                        class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition-all"><i
-                            class="fab fa-instagram"></i></a>
+                <div class="col-span-2 lg:col-span-1">
+                    <a href="#" class="inline-block mb-4 transition-transform hover:scale-105">
+                        <img src="/assets/images/logo-nobg.png" alt="Cognora Logo" class="h-28 w-auto object-contain">
+                    </a>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-5 max-w-xs">
+                        Innovating intelligence and empowering the future with scalable digital solutions.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="https://www.linkedin.com/company/cognora-technologies/"
+                            class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-brand-500/50 transition-all">
+                            <i class="fab fa-linkedin-in text-xs"></i>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all">
+                            <i class="fab fa-twitter text-xs"></i>
+                        </a>
+                        <a href="#"
+                            class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all">
+                            <i class="fab fa-instagram text-xs"></i>
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <div>
-                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-6">Company</h4>
-                <ul class="space-y-3 text-sm text-slate-400">
-                    <li><a href="index.html" class="hover:text-brand-400 transition-colors">Home</a></li>
-                    <li><a href="about.html" class="hover:text-brand-400 transition-colors">About Us</a></li>
-                    <li><a href="services.html" class="hover:text-brand-400 transition-colors">Services</a></li>
-                    <li><a href="careers.html" class="hover:text-brand-400 transition-colors">Careers</a></li>
-                    <li><a href="contact.html" class="hover:text-brand-400 transition-colors">Contact</a></li>
-                </ul>
-            </div>
+                <div class="col-span-1 lg:col-span-1">
+                    <h4 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-5 opacity-70">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-slate-500 hover:text-white text-sm transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-slate-500 hover:text-white text-sm transition-colors">About
+                                Us</a></li>
+                        <li><a href="#services"
+                                class="text-slate-500 hover:text-white text-sm transition-colors">Services</a></li>
+                        <li><a href="careers.html"
+                                class="text-slate-500 hover:text-white text-sm transition-colors">Careers</a></li>
+                    </ul>
+                </div>
 
-            <div>
-                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-6">Services</h4>
-                <ul class="space-y-3 text-sm text-slate-400">
-                    <li><a href="services.html" class="hover:text-brand-400 transition-colors">Web Development</a></li>
-                    <li><a href="services.html" class="hover:text-brand-400 transition-colors">App Development</a></li>
-                    <li><a href="services.html" class="hover:text-brand-400 transition-colors">UI/UX Design</a></li>
-                    <li><a href="services.html" class="hover:text-brand-400 transition-colors">Digital Marketing</a>
-                    </li>
-                </ul>
-            </div>
+                <div class="col-span-1 lg:col-span-1">
+                    <h4 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-5 opacity-70">Services
+                    </h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-slate-500 hover:text-white text-sm transition-colors">Web
+                                Dev</a></li>
+                        <li><a href="#services" class="text-slate-500 hover:text-white text-sm transition-colors">Mobile
+                                Apps</a></li>
+                        <li><a href="#services" class="text-slate-500 hover:text-white text-sm transition-colors">UI/UX
+                                Design</a></li>
+                        <li><a href="#services"
+                                class="text-slate-500 hover:text-white text-sm transition-colors">Automation</a></li>
+                    </ul>
+                </div>
 
-            <div>
-                <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-6">Contact</h4>
-                <ul class="space-y-4 text-sm text-slate-400">
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-envelope text-brand-500"></i>
-                        <a href="mailto:info@cognoratech.com"
-                            class="hover:text-white transition-colors">info@cognoratech.com</a>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-envelope text-brand-500"></i>
-                        <a href="mailto:marketing@cognoratech.com"
-                            class="hover:text-white transition-colors">marketing@cognoratech.com</a>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-phone-alt text-brand-500"></i>
-                        <span>+91 88859 37030</span>
-                    </li>
-                </ul>
+                <div class="col-span-2 lg:col-span-1">
+                    <h4 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-5 opacity-70">Contact</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <div
+                                class="w-7 h-7 rounded bg-white/5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <i class="fas fa-envelope text-slate-500 text-[10px]"></i>
+                            </div>
+                            <div class="text-sm">
+                                <a href="mailto:info@cognoratech.com"
+                                    class="text-slate-500 hover:text-slate-200 transition-colors block">info@cognoratech.com</a>
+                                <a href="mailto:marketing@cognoratech.com"
+                                    class="text-slate-500 hover:text-slate-200 transition-colors block">marketing@cognoratech.com</a>
+                            </div>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-7 h-7 rounded bg-white/5 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-slate-500 text-[10px]"></i>
+                            </div>
+                            <span class="text-slate-500 text-sm">+91 88859 37030</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div class="border-t border-slate-800 bg-slate-950">
-            <div
-                class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-                <p>&copy; <span id="year"></span> Cognora Technologies Pvt. Ltd. All rights reserved.</p>
-                <div class="flex gap-6">
-                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        <div class="border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-6 py-6">
+                <div class="flex items-center justify-center md:justify-start">
+                    <p class="text-[10px] text-slate-500 font-medium tracking-wide">
+                        &copy; <span id="year"></span>
+                        <span class="text-slate-300">Cognora Technologies Pvt. Ltd.</span>
+                        All rights reserved.
+                    </p>
                 </div>
             </div>
         </div>
