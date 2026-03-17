@@ -14,24 +14,6 @@
     @apply transition-colors duration-200;
 }
 
-.client-marquee-container {
-    /* This creates the 'fading' effect on both sides */
-    mask-image: linear-gradient(
-        to right,
-        transparent,
-        black 15%,
-        black 85%,
-        transparent
-    );
-    -webkit-mask-image: linear-gradient(
-        to right,
-        transparent,
-        black 15%,
-        black 85%,
-        transparent
-    );
-}
-
 /* Smooth stop when user interacts */
 .animate-scroll-slow:hover {
     animation-play-state: paused;
