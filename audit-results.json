@@ -1,0 +1,28 @@
+{
+  "missingPages": [
+    "about.html: Broken link to careers.html",
+    "blog.html: Broken link to careers.html",
+    "contact.html: Broken link to careers.html",
+    "index.html: Broken link to careers.html",
+    "privacy.html: Broken link to careers.html",
+    "process.html: Broken link to careers.html",
+    "services.html: Broken link to careers.html"
+  ],
+  "brokenAssets": [],
+  "seoIssues": [
+    "about.html: Missing meta description",
+    "blog.html: Missing meta description",
+    "contact.html: Missing meta description",
+    "index.html: Missing meta description",
+    "privacy.html: Missing meta description",
+    "process.html: Missing meta description",
+    "services.html: Missing meta description",
+    "test.html: Missing <title> tag",
+    "test.html: Missing meta description"
+  ],
+  "a11yIssues": [
+    "index.html: Image missing alt attribute (https://randomuser.me/api/portraits/men/32.jpg)",
+    "index.html: Image missing alt attribute (https://randomuser.me/api/portraits/women/44.jpg)",
+    "index.html: Image missing alt attribute (https://randomuser.me/api/portraits/men/85.jpg)"
+  ]
+}

@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cognora Technologies | Digital Innovation</title>
+    <title>About Us | Cognora Technologies</title>
 
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -17,8 +19,7 @@
         rel="stylesheet">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+
     <script>
         tailwind.config = {
             theme: {
@@ -29,23 +30,23 @@
                     },
                     colors: {
                         brand: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb', // Logo Blue
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#0f172a', // Deep Slate
+                            50: '#eff6ff', 100: '#dbeafe', 500: '#3b82f6',
+                            600: '#2563eb', 700: '#1d4ed8', 900: '#0f172a',
                         },
-                        accent: '#06b6d4', // Cyan
+                        accent: '#06b6d4',
                     },
                     boxShadow: {
                         'glow': '0 0 20px rgba(37, 99, 235, 0.15)',
                         'card': '0 10px 30px -5px rgba(0, 0, 0, 0.05)',
                     },
-                    backgroundImage: {
-                        'grid-pattern': "radial-gradient(#cbd5e1 1px, transparent 1px)",
+                    animation: {
+                        'scroll-slow': 'scroll 40s linear infinite',
+                    },
+                    keyframes: {
+                        scroll: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        },
                     }
                 }
             }
@@ -53,34 +54,10 @@
     </script>
 
     <style>
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-
-        /* Text Gradient */
-        .text-gradient {
-            background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Grid Background sizing */
-        .bg-grid-pattern {
-            background-size: 30px 30px;
+        /* ... keep your scrollbar and gradient text CSS ... */
+        .marquee-mask {
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
         }
     </style>
 </head>
@@ -105,9 +82,9 @@
 
             <div class="hidden md:flex items-center gap-8">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
+                <a href="about.html" class="nav-link">About US</a>
                 <a href="services.html" class="nav-link">Services</a>
-                <a href="careers.html" class="nav-link">Careers</a>
+
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
 
@@ -139,7 +116,7 @@
             class="fixed inset-0 w-full h-screen bg-white transition-transform duration-500 ease-in-out -translate-y-[150%] md:hidden z-[55]">
             <div class="flex flex-col items-center justify-center h-full gap-8 p-4">
                 <a href="index.html" class="mobile-link text-2xl font-semibold text-slate-900">Home</a>
-                <a href="about.html" class="mobile-link text-2xl font-semibold text-slate-900">About</a>
+                <a href="about.html" class="mobile-link text-2xl font-semibold text-slate-900">About US</a>
                 <a href="services.html" class="mobile-link text-2xl font-semibold text-slate-900">Services</a>
                 <a href="careers.html" class="mobile-link text-2xl font-semibold text-slate-900">Careers</a>
                 <a href="contact.html" class="mobile-link text-2xl font-semibold text-slate-900">Contact</a>
@@ -304,138 +281,146 @@
     </section>
 
     <!-- Our Clients -->
-    <section class="py-16 bg-white border-y border-slate-100 overflow-hidden">
+    <section class="py-20 bg-white border-y border-slate-100 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 text-center">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 mb-20">
 
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-100 transition-all"
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 group hover:border-brand-200 hover:bg-white hover:shadow-card hover:-translate-y-2 transition-all duration-300"
                     data-aos="fade-up">
                     <div
-                        class="w-12 h-12 mx-auto mb-4 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                        class="w-14 h-14 mx-auto mb-6 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition-all duration-300">
                         <i class="fas fa-smile"></i>
                     </div>
-                    <h3 class="font-heading text-4xl font-bold text-brand-900 mb-1">
+                    <h3 class="font-heading text-4xl lg:text-5xl font-bold text-brand-900 mb-2 text-center">
                         <span class="counter" data-target="39">0</span>+
                     </h3>
-                    <p class="text-slate-500 font-medium">Happy Clients</p>
+                    <p class="text-slate-500 font-medium text-center tracking-wide uppercase text-xs">Happy Clients</p>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-100 transition-all"
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 group hover:border-brand-200 hover:bg-white hover:shadow-card hover:-translate-y-2 transition-all duration-300"
                     data-aos="fade-up" data-aos-delay="100">
                     <div
-                        class="w-12 h-12 mx-auto mb-4 bg-cyan-100 text-accent rounded-full flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                        class="w-14 h-14 mx-auto mb-6 bg-cyan-50 text-accent rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                         <i class="fas fa-project-diagram"></i>
                     </div>
-                    <h3 class="font-heading text-4xl font-bold text-brand-900 mb-1">
+                    <h3 class="font-heading text-4xl lg:text-5xl font-bold text-brand-900 mb-2 text-center">
                         <span class="counter" data-target="75">0</span>+
                     </h3>
-                    <p class="text-slate-500 font-medium">Projects Completed</p>
+                    <p class="text-slate-500 font-medium text-center tracking-wide uppercase text-xs">Projects Completed
+                    </p>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-100 transition-all"
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 group hover:border-accent hover:bg-white hover:shadow-card hover:-translate-y-2 transition-all duration-300"
                     data-aos="fade-up" data-aos-delay="200">
-                    <div
-                        class="w-12 h-12 mx-auto mb-4 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                        <i class="fas fa-calendar-alt"></i>
+
+                    <div class="relative w-14 h-14 mx-auto mb-6">
+                        <div class="absolute inset-0 bg-accent/20 rounded-2xl animate-ping group-hover:block hidden">
+                        </div>
+                        <div
+                            class="relative w-14 h-14 bg-accent/10 text-accent rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                            <i class="fas fa-clock-rotate-left"></i>
+                        </div>
                     </div>
-                    <h3 class="font-heading text-4xl font-bold text-brand-900 mb-1">
-                        <span class="counter" data-target="1">0</span>+
+
+                    <h3
+                        class="font-heading text-4xl lg:text-5xl font-bold text-brand-900 mb-2 text-center flex justify-center items-baseline gap-1">
+                        <span class="text-xs font-medium text-slate-400 uppercase tracking-tighter">within</span>
+                        <span class="counter" data-target="24">0</span>
+                        <span class="text-2xl font-semibold">h</span>
                     </h3>
-                    <p class="text-slate-500 font-medium">Years of Experience</p>
+
+                    <p class="text-slate-500 font-medium text-center tracking-wide uppercase text-[10px]">
+                        Guaranteed Response
+                    </p>
                 </div>
 
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-brand-100 transition-all"
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 group hover:border-brand-200 hover:bg-white hover:shadow-card hover:-translate-y-2 transition-all duration-300"
                     data-aos="fade-up" data-aos-delay="300">
                     <div
-                        class="w-12 h-12 mx-auto mb-4 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                        class="w-14 h-14 mx-auto mb-6 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300">
                         <i class="fas fa-users"></i>
                     </div>
-                    <h3 class="font-heading text-4xl font-bold text-brand-900 mb-1">
+                    <h3 class="font-heading text-4xl lg:text-5xl font-bold text-brand-900 mb-2 text-center">
                         <span class="counter" data-target="15">0</span>+
                     </h3>
-                    <p class="text-slate-500 font-medium">Team Members</p>
+                    <p class="text-slate-500 font-medium text-center tracking-wide uppercase text-xs">Expert Team</p>
                 </div>
             </div>
 
-            <div class="py-6 bg-white border-b border-slate-100">
-                <div class="py-6 bg-white border-b border-slate-100 overflow-hidden">
+            <div class="pt-10 border-t border-slate-100">
+                <p class="text-center text-[12px] font-bold text-slate-400 mb-14 uppercase tracking-[0.4em]">
+                    OUR CLIENTS
+                </p>
 
-                    <p class="text-center text-xs font-bold text-slate-400 mb-10 uppercase tracking-[0.2em]">
-                        Trusted by Innovative Companies
-                    </p>
+                <div class="marquee-mask relative w-full overflow-hidden py-4">
 
-                    <div class="relative w-full">
+                    <div class="flex items-center animate-scroll-slow hover:[animation-play-state:paused] w-max">
 
-                        <div
-                            class="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none">
-                        </div>
-                        <div
-                            class="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none">
-                        </div>
-
-                        <div class="flex items-center animate-scroll md:animate-scroll-slow w-max">
-
-                            <div class="flex items-center">
-                                <div class="w-[25vw] flex justify-center px-4">
-                                    <img src="assets/images/clients/client1.png" alt="Client 1"
-                                        class="h-16 w-auto object-contain max-w-full">
-                                </div>
-                                <div class="w-[25vw] flex justify-center px-4">
-                                    <img src="assets/images/clients/client2.png" alt="Client 2"
-                                        class="h-16 w-auto object-contain max-w-full">
-                                </div>
-                                <div class="w-[25vw] flex justify-center px-4">
-                                    <img src="assets/images/clients/client3.png" alt="Client 3"
-                                        class="h-16 w-auto object-contain max-w-full">
-                                </div>
-                                <div class="w-[25vw] flex justify-center px-4">
-                                    <img src="assets/images/clients/client4.png" alt="Client 4"
-                                        class="h-16 w-auto object-contain max-w-full">
-                                </div>
-                                <div class="w-[25vw] flex justify-center px-4">
-                                    <img src="assets/images/clients/client5.png" alt="Client 5"
-                                        class="h-16 w-auto object-contain max-w-full">
-                                </div>
-                                <div class="w-[25vw] flex justify-center px-4">
-                                    <img src="assets/images/clients/client6.png" alt="Client 6"
-                                        class="h-16 w-auto object-contain max-w-full">
-                                </div>
+                        <div class="flex items-center">
+                            <div class="w-[250px] flex-shrink-0 px-12 transition-all duration-300 hover:scale-110">
+                                <img src="assets/images/clients/client1.png" alt="Client 1"
+                                    class="h-16 md:h-20 w-auto object-contain block mx-auto">
                             </div>
-
-                            <div class="flex items-center" aria-hidden="true">
-                                <div class="w-[25vw] flex justify-center px-4">
-                                    <img src="assets/images/clients/client1.png" alt="Client 1"
-                                        class="h-16 w-auto object-contain max-w-full">
-                                </div>
-                                <div class="w-[25vw] flex justify-center px-4">
-                                    <img src="assets/images/clients/client2.png" alt="Client 2"
-                                        class="h-16 w-auto object-contain max-w-full">
-                                </div>
-                                <div class="w-[25vw] flex justify-center px-4">
-                                    <img src="assets/images/clients/client3.png" alt="Client 3"
-                                        class="h-16 w-auto object-contain max-w-full">
-                                </div>
-                                <div class="w-[25vw] flex justify-center px-4">
-                                    <img src="assets/images/clients/client4.png" alt="Client 4"
-                                        class="h-16 w-auto object-contain max-w-full">
-                                </div>
-                                <div class="w-[25vw] flex justify-center px-4">
-                                    <img src="assets/images/clients/client5.png" alt="Client 5"
-                                        class="h-16 w-auto object-contain max-w-full">
-                                </div>
-                                <div class="w-[25vw] flex justify-center px-4">
-                                    <img src="assets/images/clients/client6.png" alt="Client 6"
-                                        class="h-16 w-auto object-contain max-w-full">
-                                </div>
+                            <div class="w-[250px] flex-shrink-0 px-12 transition-all duration-300 hover:scale-110">
+                                <img src="assets/images/clients/client2.png" alt="Client 2"
+                                    class="h-16 md:h-20 w-auto object-contain block mx-auto">
                             </div>
-
+                            <div class="w-[250px] flex-shrink-0 px-12 transition-all duration-300 hover:scale-110">
+                                <img src="assets/images/clients/client3.png" alt="Client 3"
+                                    class="h-16 md:h-20 w-auto object-contain block mx-auto">
+                            </div>
+                            <div class="w-[250px] flex-shrink-0 px-12 transition-all duration-300 hover:scale-110">
+                                <img src="assets/images/clients/client4.png" alt="Client 4"
+                                    class="h-16 md:h-20 w-auto object-contain block mx-auto">
+                            </div>
+                            <div class="w-[250px] flex-shrink-0 px-12 transition-all duration-300 hover:scale-110">
+                                <img src="assets/images/clients/client5.png" alt="Client 5"
+                                    class="h-16 md:h-20 w-auto object-contain block mx-auto">
+                            </div>
+                            <div class="w-[250px] flex-shrink-0 px-12 transition-all duration-300 hover:scale-110">
+                                <img src="assets/images/clients/client6.png" alt="Client 6"
+                                    class="h-16 md:h-20 w-auto object-contain block mx-auto">
+                            </div>
                         </div>
+
+                        <div class="flex items-center" aria-hidden="true">
+                            <div class="w-[250px] flex-shrink-0 px-12 transition-all duration-300 hover:scale-110">
+                                <img src="assets/images/clients/client1.png" alt="Client 1"
+                                    class="h-16 md:h-20 w-auto object-contain block mx-auto">
+                            </div>
+                            <div class="w-[250px] flex-shrink-0 px-12 transition-all duration-300 hover:scale-110">
+                                <img src="assets/images/clients/client2.png" alt="Client 2"
+                                    class="h-16 md:h-20 w-auto object-contain block mx-auto">
+                            </div>
+                            <div class="w-[250px] flex-shrink-0 px-12 transition-all duration-300 hover:scale-110">
+                                <img src="assets/images/clients/client3.png" alt="Client 3"
+                                    class="h-16 md:h-20 w-auto object-contain block mx-auto">
+                            </div>
+                            <div class="w-[250px] flex-shrink-0 px-12 transition-all duration-300 hover:scale-110">
+                                <img src="assets/images/clients/client4.png" alt="Client 4"
+                                    class="h-16 md:h-20 w-auto object-contain block mx-auto">
+                            </div>
+                            <div class="w-[250px] flex-shrink-0 px-12 transition-all duration-300 hover:scale-110">
+                                <img src="assets/images/clients/client5.png" alt="Client 5"
+                                    class="h-16 md:h-20 w-auto object-contain block mx-auto">
+                            </div>
+                            <div class="w-[250px] flex-shrink-0 px-12 transition-all duration-300 hover:scale-110">
+                                <img src="assets/images/clients/client6.png" alt="Client 6"
+                                    class="h-16 md:h-20 w-auto object-contain block mx-auto">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-white via-white/20 to-transparent z-10 pointer-events-none">
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-white via-white/20 to-transparent z-10 pointer-events-none">
                     </div>
                 </div>
-
             </div>
-
 
         </div>
     </section>
@@ -1060,8 +1045,9 @@
                                 Us</a></li>
                         <li><a href="#services"
                                 class="text-slate-500 hover:text-white text-sm transition-colors">Services</a></li>
-                        <li><a href="careers.html"
-                                class="text-slate-500 hover:text-white text-sm transition-colors">Careers</a></li>
+                        <li><a href="privacy.html"
+                                class="text-slate-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
+                        </li>
                     </ul>
                 </div>
 
