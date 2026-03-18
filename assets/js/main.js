@@ -11,12 +11,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const iconHamburger = document.getElementById("iconHamburger");
     const iconClose = document.getElementById("iconClose");
 
+    // Modal References (for quoteForm)
+    const modal = document.getElementById('thankYouModal');
+    const backdrop = document.getElementById('modalBackdrop');
+    const panel = document.getElementById('modalPanel');
+    const closeBtn = document.getElementById('closeModalBtn');
+
     /* ======================================================
        2. MOBILE MENU LOGIC
     ====================================================== */
     function openMobileMenu() {
         mobileMenu.classList.remove("-translate-y-[150%]");
-        document.body.style.overflow = "hidden"; // Prevent background scroll
+        document.body.style.overflow = "hidden";
         if (iconHamburger && iconClose) {
             iconHamburger.classList.add("opacity-0", "rotate-90");
             iconHamburger.classList.remove("opacity-100", "rotate-0");
@@ -27,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function closeMobileMenu() {
         mobileMenu.classList.add("-translate-y-[150%]");
-        document.body.style.overflow = ""; // Restore scroll
+        document.body.style.overflow = "";
         if (iconHamburger && iconClose) {
             iconHamburger.classList.remove("opacity-0", "rotate-90");
             iconHamburger.classList.add("opacity-100", "rotate-0");
@@ -41,8 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const isClosed = mobileMenu.classList.contains("-translate-y-[150%]");
             isClosed ? openMobileMenu() : closeMobileMenu();
         });
-
-        // Close menu when clicking a link (especially useful for one-page sections)
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', closeMobileMenu);
         });
@@ -52,14 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
        3. ACTIVE NAV LINK HIGHLIGHTER
     ====================================================== */
     const currentPath = window.location.pathname.split("/").pop() || "index.html";
-
     navLinks.forEach(link => {
-        // Highlight current page
         if (link.getAttribute("href") === currentPath) {
             link.classList.add("text-brand-600", "font-bold");
         }
-
-        // Smooth scroll for anchor links
         link.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             if (href.startsWith('#') && href.length > 1) {
@@ -67,8 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (targetElement) {
                     e.preventDefault();
                     targetElement.scrollIntoView({ behavior: 'smooth' });
-                    
-                    // Update Active State
                     navLinks.forEach(l => l.classList.remove("text-brand-600", "font-bold"));
                     this.classList.add("text-brand-600", "font-bold");
                 }
@@ -80,18 +78,13 @@ document.addEventListener("DOMContentLoaded", () => {
        4. SCROLL EFFECTS (Navbar & Progress)
     ====================================================== */
     let lastScrollY = window.scrollY;
-
     window.addEventListener("scroll", () => {
         const scrollY = window.scrollY;
-
-        // Progress Bar
         if (progressBar) {
             const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrolled = (scrollY / docHeight) * 100;
             progressBar.style.width = `${scrolled}%`;
         }
-
-        // Navbar Appearance Logic
         if (header) {
             if (scrollY > 20) {
                 header.classList.add("shadow-md", "bg-white/95", "py-2");
@@ -100,8 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 header.classList.remove("shadow-md", "bg-white/95", "py-2");
                 header.classList.add("bg-white/80", "border-transparent");
             }
-
-            // Hide/Show on scroll (Smart Header)
             if (scrollY > lastScrollY && scrollY > 150) {
                 header.classList.add("-translate-y-full");
             } else {
@@ -116,9 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ====================================================== */
     const runCounterAnimation = (counter) => {
         const target = +counter.getAttribute('data-target');
-        const duration = 2000; // 2 seconds animation
+        const duration = 2000;
         const step = target / (duration / 20); 
-
         const updateCount = () => {
             const count = +counter.innerText;
             if (count < target) {
@@ -139,31 +129,71 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }, { threshold: 0.5 });
-
     counters.forEach(counter => observer.observe(counter));
 
     /* ======================================================
-       6. AOS & FORM HANDLING (Thank You Popup)
+       6. NEWSLETTER FORM HANDLING (Your Specific Fetch)
+    ====================================================== */
+    const newsletterForm = document.getElementById('newsletter-form');
+    const result = document.getElementById('result');
+
+    if (newsletterForm && result) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(newsletterForm);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            result.innerHTML = "Please wait...";
+            result.classList.remove('hidden');
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let jsonResponse = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = "Thanks! You've been subscribed.";
+                    newsletterForm.reset();
+                } else {
+                    console.log(response);
+                    result.innerHTML = jsonResponse.message;
+                }
+            })
+            .catch(error => {
+                console.log(error);
+                result.innerHTML = "Something went wrong!";
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    result.classList.add('hidden');
+                }, 5000);
+            });
+        });
+    }
+
+    /* ======================================================
+       7. MAIN QUOTE FORM HANDLING (Modal Trigger)
     ====================================================== */
     if (typeof AOS !== 'undefined') {
         AOS.init({ once: true, offset: 50, duration: 800 });
     }
 
-    const form = document.getElementById('quoteForm');
-    const modal = document.getElementById('thankYouModal');
-    const backdrop = document.getElementById('modalBackdrop');
-    const panel = document.getElementById('modalPanel');
-    const closeBtn = document.getElementById('closeModalBtn');
-
-    if (form) {
-        form.addEventListener('submit', function (e) {
+    const quoteForm = document.getElementById('quoteForm');
+    if (quoteForm) {
+        quoteForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            const btn = form.querySelector('button[type="submit"]');
+            const btn = quoteForm.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
             btn.innerHTML = '<span>Sending...</span>';
             btn.disabled = true;
 
-            const formData = new FormData(form);
+            const formData = new FormData(quoteForm);
             fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
                 body: formData
@@ -171,7 +201,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(response => {
                 if (response.status === 200) {
                     showModal();
-                    form.reset();
+                    quoteForm.reset();
                 } else {
                     alert("Something went wrong. Please try again.");
                 }
