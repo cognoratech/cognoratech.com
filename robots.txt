@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cognoratech.com/sitemap.xml
+
+# Future PMS subdomain
+# Sitemap: https://pms.cognoratech.com/sitemap.xml
+

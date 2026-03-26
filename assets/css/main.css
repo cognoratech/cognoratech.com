@@ -1,21 +1,27 @@
-/* Navigation Link Styling - Clean Text Only */
+/* Marquee Scroll Animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll-slow {
+  animation: scroll 30s linear infinite;
+  display: flex;
+}
+
+/* Faster on Mobile */
+@media (max-width: 768px) {
+  .animate-scroll-slow {
+    animation-duration: 15s;
+  }
+}
+
+/* Navigation Links */
 .nav-link {
-    @apply text-xs font-medium uppercase tracking-[0.16em] text-slate-500 hover:text-slate-900 transition-colors duration-300 relative;
+  @apply text-xs font-medium uppercase tracking-[0.16em] text-slate-500 transition-colors duration-300;
 }
 
-/* Active Page Highlight (Matches your JS logic) */
-.text-brand-600 {
-    /* Using a dark slate or your specific brand color for the active state */
-    @apply text-slate-900 font-bold !important;
-}
-
-/* Ensure mobile links also look clean */
-.mobile-link {
-    @apply transition-colors duration-200;
-}
-
-/* Smooth stop when user interacts */
-.animate-scroll-slow:hover {
-    animation-play-state: paused;
-    cursor: pointer;
+.nav-link:hover,
+.active-nav {
+  @apply text-slate-900;
 }

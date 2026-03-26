@@ -21,22 +21,28 @@ document.addEventListener("DOMContentLoaded", () => {
        2. MOBILE MENU LOGIC
     ====================================================== */
     function openMobileMenu() {
-        mobileMenu.classList.remove("-translate-y-[150%]");
+        mobileMenu.classList.remove("translate-x-full");
+        mobileMenu.classList.add("translate-x-0");
         document.body.style.overflow = "hidden";
+
         if (iconHamburger && iconClose) {
             iconHamburger.classList.add("opacity-0", "rotate-90");
             iconHamburger.classList.remove("opacity-100", "rotate-0");
+
             iconClose.classList.remove("opacity-0", "rotate-90");
             iconClose.classList.add("opacity-100", "rotate-0");
         }
     }
 
     function closeMobileMenu() {
-        mobileMenu.classList.add("-translate-y-[150%]");
+        mobileMenu.classList.add("translate-x-full");
+        mobileMenu.classList.remove("translate-x-0");
         document.body.style.overflow = "";
+
         if (iconHamburger && iconClose) {
             iconHamburger.classList.remove("opacity-0", "rotate-90");
             iconHamburger.classList.add("opacity-100", "rotate-0");
+
             iconClose.classList.add("opacity-0", "rotate-90");
             iconClose.classList.remove("opacity-100", "rotate-0");
         }
@@ -44,31 +50,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (menuBtn && mobileMenu) {
         menuBtn.addEventListener("click", () => {
-            const isClosed = mobileMenu.classList.contains("-translate-y-[150%]");
+            const isClosed = mobileMenu.classList.contains("translate-x-full");
             isClosed ? openMobileMenu() : closeMobileMenu();
         });
+
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', closeMobileMenu);
         });
     }
-
     /* ======================================================
        3. ACTIVE NAV LINK HIGHLIGHTER
     ====================================================== */
     const currentPath = window.location.pathname.split("/").pop() || "index.html";
     navLinks.forEach(link => {
+        // do not force active color/bold:
         if (link.getAttribute("href") === currentPath) {
-            link.classList.add("text-brand-600", "font-bold");
+            // nothing added
         }
+
         link.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
+
+            // remove previously forced classes just in case (clean state)
+            navLinks.forEach(l =>
+                l.classList.remove('font-bold', 'active-nav', 'text-brand-600')
+            );
+
+            // no style class add here either
+            // this.classList.add('active-nav'); // remove this line
             if (href.startsWith('#') && href.length > 1) {
                 const targetElement = document.querySelector(href);
                 if (targetElement) {
                     e.preventDefault();
                     targetElement.scrollIntoView({ behavior: 'smooth' });
-                    navLinks.forEach(l => l.classList.remove("text-brand-600", "font-bold"));
-                    this.classList.add("text-brand-600", "font-bold");
                 }
             }
         });
@@ -108,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const runCounterAnimation = (counter) => {
         const target = +counter.getAttribute('data-target');
         const duration = 2000;
-        const step = target / (duration / 20); 
+        const step = target / (duration / 20);
         const updateCount = () => {
             const count = +counter.innerText;
             if (count < target) {
@@ -138,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const result = document.getElementById('result');
 
     if (newsletterForm && result) {
-        newsletterForm.addEventListener('submit', function(e) {
+        newsletterForm.addEventListener('submit', function (e) {
             e.preventDefault();
             const formData = new FormData(newsletterForm);
             const object = Object.fromEntries(formData);
@@ -155,25 +169,25 @@ document.addEventListener("DOMContentLoaded", () => {
                 },
                 body: json
             })
-            .then(async (response) => {
-                let jsonResponse = await response.json();
-                if (response.status == 200) {
-                    result.innerHTML = "Thanks! You've been subscribed.";
-                    newsletterForm.reset();
-                } else {
-                    console.log(response);
-                    result.innerHTML = jsonResponse.message;
-                }
-            })
-            .catch(error => {
-                console.log(error);
-                result.innerHTML = "Something went wrong!";
-            })
-            .finally(() => {
-                setTimeout(() => {
-                    result.classList.add('hidden');
-                }, 5000);
-            });
+                .then(async (response) => {
+                    let jsonResponse = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = "Thanks! You've been subscribed.";
+                        newsletterForm.reset();
+                    } else {
+                        console.log(response);
+                        result.innerHTML = jsonResponse.message;
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
+                })
+                .finally(() => {
+                    setTimeout(() => {
+                        result.classList.add('hidden');
+                    }, 5000);
+                });
         });
     }
 
@@ -198,19 +212,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 method: 'POST',
                 body: formData
             })
-            .then(response => {
-                if (response.status === 200) {
-                    showModal();
-                    quoteForm.reset();
-                } else {
-                    alert("Something went wrong. Please try again.");
-                }
-            })
-            .catch(() => alert("Network error. Please try again."))
-            .finally(() => {
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-            });
+                .then(response => {
+                    if (response.status === 200) {
+                        showModal();
+                        quoteForm.reset();
+                    } else {
+                        alert("Something went wrong. Please try again.");
+                    }
+                })
+                .catch(() => alert("Network error. Please try again."))
+                .finally(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                });
         });
     }
 
