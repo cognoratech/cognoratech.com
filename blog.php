@@ -1,140 +1,16 @@
+<?php 
+  $page_title = "Blog & Insights | Cognora Technologies";
+  $meta_desc = "Cognora - Elevating your digital presence with modern web development, UI/UX design, and innovative IT solutions.";
+  $canonical_url = "https://cognoratech.com/blog.php";
+?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog & Insights | Cognora Technologies</title>
-    <meta name="description"
-        content="Cognora - Elevating your digital presence with modern web development, UI/UX design, and innovative IT solutions.">
-
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
-        rel="stylesheet">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Outfit', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            900: '#0f172a', // Deep Slate
-                        },
-                        accent: '#06b6d4', // Cyan
-                    },
-                    boxShadow: {
-                        'glow': '0 0 20px rgba(37, 99, 235, 0.15)',
-                        'card': '0 10px 30px -5px rgba(0, 0, 0, 0.05)',
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-
-        /* Grid Pattern */
-        .bg-grid-pattern {
-            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-            background-size: 30px 30px;
-        }
-    </style>
+    <?php include 'includes/head.php'; ?>
 </head>
-
-<body class="font-sans text-slate-600 antialiased overflow-x-hidden selection:bg-brand-600 selection:text-white">
-
-    <div id="scrollProgress"
-        class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-600 to-accent z-[100] w-0 transition-all duration-200">
-    </div>
-
-   <header id="navbar"
-        class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-white/80 backdrop-blur-xl transition-all duration-500">
-        <nav class="max-w-7xl mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
-
-            <div class="flex flex-1 justify-start">
-                <a href="index.html" class="flex items-center gap-2 group">
-                    <img id="navLogo" src="assets/images/logo-nobg.png" alt="Cognora Technologies"
-                        class="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
-                </a>
-            </div>
-
-            <div class="hidden md:flex items-center gap-8">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="/about" class="nav-link">About</a>
-                <a href="/services" class="nav-link">Services</a>
-                <a href="/contact" class="nav-link">Contact</a>
-            </div>
-
-            <div class="hidden md:flex flex-1 justify-end">
-                <a href="#get-in-touch"
-                    class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800">
-                    Get a quote
-                    <span class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-                </a>
-            </div>
-
-            <button id="menuBtn"
-                class="md:hidden flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800 shadow-sm focus:outline-none relative z-[60]"
-                aria-label="Toggle menu">
-                <svg id="iconHamburger" class="w-6 h-6 absolute transition-all duration-300 opacity-100 rotate-0"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-                <svg id="iconClose" class="w-6 h-6 absolute transition-all duration-300 opacity-0 rotate-90" fill="none"
-                    stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                    </path>
-                </svg>
-            </button>
-        </nav>
-
-        <div id="mobileMenu"
-    class="fixed top-0 right-0 w-full h-screen bg-white transition-transform duration-500 ease-in-out translate-x-full md:hidden z-[55]">
-            <div class="flex flex-col items-center justify-center h-full gap-8 p-4">
-                <a href="index.html" class="mobile-link text-2xl font-semibold text-slate-900">Home</a>
-                <a href="/about" class="mobile-link text-2xl font-semibold text-slate-900">About</a>
-                <a href="/services" class="mobile-link text-2xl font-semibold text-slate-900">Services</a>
-                <a href="/contact" class="mobile-link text-2xl font-semibold text-slate-900">Contact</a>
-            </div>
-        </div>
-    </header>
+<body class="font-sans text-slate-700 antialiased bg-slate-950/5 overflow-x-hidden selection:bg-brand-600 selection:text-white">
+    <?php include 'includes/header.php'; ?>
+    <main>
 
     <section class="relative pt-32 pb-16 bg-brand-50">
         <div class="absolute inset-0 bg-grid-pattern opacity-50"></div>
@@ -154,7 +30,7 @@
                 data-aos="fade-up">
                 <div class="relative h-64 lg:h-auto overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                        alt="AI Technology"
+                        alt="AI Technology" width="1200" height="630"
                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     <div class="absolute top-4 left-4 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                         FEATURED</div>
@@ -202,7 +78,7 @@
                     data-aos="fade-up" data-aos-delay="0">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                            alt="Coding"
+                            alt="Coding" width="600" height="400" loading="lazy"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span
                             class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">DevOps</span>
@@ -226,7 +102,7 @@
                     data-aos="fade-up" data-aos-delay="100">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                            alt="Design"
+                            alt="Design" width="600" height="400" loading="lazy"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span
                             class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">UI/UX</span>
@@ -250,7 +126,7 @@
                     data-aos="fade-up" data-aos-delay="200">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                            alt="Cloud"
+                            alt="Cloud" width="600" height="400" loading="lazy"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span
                             class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">Cloud</span>
@@ -273,7 +149,7 @@
                     data-aos="fade-up" data-aos-delay="0">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                            alt="Mobile"
+                            alt="Mobile" width="600" height="400" loading="lazy"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span
                             class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">Mobile</span>
@@ -296,7 +172,7 @@
                     data-aos="fade-up" data-aos-delay="100">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                            alt="Security"
+                            alt="Security" width="600" height="400" loading="lazy"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span
                             class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">Security</span>
@@ -319,7 +195,7 @@
                     data-aos="fade-up" data-aos-delay="200">
                     <div class="h-48 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                            alt="Team"
+                            alt="Team" width="600" height="400" loading="lazy"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                         <span
                             class="absolute bottom-3 left-3 bg-white/90 backdrop-blur text-xs font-bold px-2 py-1 rounded text-brand-900">Culture</span>
@@ -356,128 +232,8 @@
         </div>
     </section>
 
-    <section class="py-20 bg-brand-900 text-white relative overflow-hidden">
-        <div
-            class="absolute top-0 right-0 w-96 h-96 bg-brand-600/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2">
-        </div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <h2 class="font-heading text-3xl font-bold mb-4">Stay Updated with Cognora</h2>
-            <p class="text-slate-400 mb-8">Get the latest tech trends and company news delivered to your inbox.</p>
-
-            <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-                <input type="email" placeholder="Enter your email"
-                    class="flex-1 px-5 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-brand-500 transition-colors">
-                <button
-                    class="px-8 py-3 bg-brand-600 text-white font-bold rounded-lg hover:bg-brand-500 transition-colors">Subscribe</button>
-            </form>
-        </div>
-    </section>
-
-    <footer style="background:#060a14; border-top:1px solid rgba(255,255,255,.05)">
-        <div class="max-w-7xl mx-auto px-6 py-10 lg:py-12">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-8">
-
-                <div class="col-span-2 lg:col-span-1">
-                    <a href="#" class="inline-block mb-4 transition-transform hover:scale-105">
-                        <img src="/assets/images/logo-nobg.png" alt="Cognora Logo" class="h-28 w-auto object-contain">
-                    </a>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-5 max-w-xs">
-                        Innovating intelligence and empowering the future with scalable digital solutions.
-                    </p>
-                    <div class="flex gap-3">
-                        <a href="https://www.linkedin.com/company/cognora-technologies/"
-                            class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-brand-500/50 transition-all">
-                            <i class="fab fa-linkedin-in text-xs"></i>
-                        </a>
-                        <a href="#"
-                            class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all">
-                            <i class="fab fa-x-twitter text-xs"></i>
-                        </a>
-                        <a href="https://www.instagram.com/cognoratech"
-                            class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all">
-                            <i class="fab fa-instagram text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-span-1 lg:col-span-1">
-                    <h4 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-5 opacity-70">Company</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-slate-500 hover:text-white text-sm transition-colors">Home</a></li>
-                        <li><a href="/about" class="text-slate-500 hover:text-white text-sm transition-colors">About
-                                Us</a></li>
-                        <li><a href="#services"
-                                class="text-slate-500 hover:text-white text-sm transition-colors">Services</a></li>
-                        <li><a href="/privacy"
-                                class="text-slate-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-span-1 lg:col-span-1">
-                    <h4 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-5 opacity-70">Services
-                    </h4>
-                    <ul class="space-y-3">
-                        <li><a href="#services" class="text-slate-500 hover:text-white text-sm transition-colors">Web
-                                Dev</a></li>
-                        <li><a href="#services" class="text-slate-500 hover:text-white text-sm transition-colors">Mobile
-                                Apps</a></li>
-                        <li><a href="#services" class="text-slate-500 hover:text-white text-sm transition-colors">UI/UX
-                                Design</a></li>
-                        <li><a href="#services"
-                                class="text-slate-500 hover:text-white text-sm transition-colors">Automation</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-span-2 lg:col-span-1">
-                    <h4 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-5 opacity-70">Contact</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <div
-                                class="w-7 h-7 rounded bg-white/5 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <i class="fas fa-envelope text-slate-500 text-[10px]"></i>
-                            </div>
-                            <div class="text-sm">
-                                <a href="mailto:info@cognoratech.com"
-                                    class="text-slate-500 hover:text-slate-200 transition-colors block">info@cognoratech.com</a>
-                                <a href="mailto:marketing@cognoratech.com"
-                                    class="text-slate-500 hover:text-slate-200 transition-colors block">marketing@cognoratech.com</a>
-                            </div>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-7 h-7 rounded bg-white/5 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-phone text-slate-500 text-[10px]"></i>
-                            </div>
-                            <span class="text-slate-500 text-sm">+91 88859 37030</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="border-t border-white/5">
-            <div class="max-w-7xl mx-auto px-6 py-6">
-                <div class="flex items-center justify-center md:justify-start">
-                    <p class="text-[10px] text-slate-500 font-medium tracking-wide">
-                        &copy; <span id="year"></span>
-                        <span class="text-slate-300">Cognora Technologies Pvt. Ltd.</span>
-                        All rights reserved.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({ once: true, offset: 50 });
-        // Dynamic Year
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-
-    <script src="assets/js/main.js"></script>
-
+    <?php include 'includes/newsletter.php'; ?>
+    </main>
+    <?php include 'includes/footer.php'; ?>
 </body>
-
 </html>

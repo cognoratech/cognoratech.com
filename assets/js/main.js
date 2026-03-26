@@ -59,25 +59,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     /* ======================================================
-       3. ACTIVE NAV LINK HIGHLIGHTER
+       3. ACTIVE NAV LINK HIGHLIGHTER & YEAR
     ====================================================== */
-    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    const currentPath = window.location.pathname.split("/").pop() || "index.php";
+    
+    // Set Year
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
     navLinks.forEach(link => {
-        // do not force active color/bold:
-        if (link.getAttribute("href") === currentPath) {
-            // nothing added
+        const href = link.getAttribute("href");
+        if (href === currentPath || (currentPath === "index.php" && href === "/")) {
+            link.classList.add("text-brand-600", "font-semibold");
         }
 
         link.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-
-            // remove previously forced classes just in case (clean state)
-            navLinks.forEach(l =>
-                l.classList.remove('font-bold', 'active-nav', 'text-brand-600')
-            );
-
-            // no style class add here either
-            // this.classList.add('active-nav'); // remove this line
             if (href.startsWith('#') && href.length > 1) {
                 const targetElement = document.querySelector(href);
                 if (targetElement) {

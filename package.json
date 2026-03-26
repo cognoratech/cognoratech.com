@@ -1,0 +1,12 @@
+{
+  "name": "cognoratech-website",
+  "version": "1.0.0",
+  "description": "Optimized Cognora Technologies Website",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/main.css -o ./assets/css/tailwind-build.css --minify",
+    "dev": "tailwindcss -i ./assets/css/main.css -o ./assets/css/tailwind-build.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}

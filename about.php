@@ -1,197 +1,37 @@
+<?php 
+  $page_title = "About Cognora Technologies | Our Story & Leadership";
+  $meta_desc = "Learn about Cognora Technologies, our mission, vision and leadership team building scalable digital solutions for modern businesses.";
+  $canonical_url = "https://cognoratech.com/about.php";
+  $extra_head = '
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Cognora Technologies",
+      "url": "https://cognoratech.com",
+      "logo": "https://cognoratech.com/assets/images/logo-nobg.png"
+    }
+    </script>
+    <style>
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob { animation: blob 7s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+    </style>
+  ';
+?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
-    <!-- Basic Meta -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>About Cognora Technologies | Our Story & Leadership</title>
-
-    <meta name="description"
-        content="Learn about Cognora Technologies, our mission, vision and leadership team building scalable digital solutions for modern businesses." />
-
-    <link rel="canonical" href="https://cognoratech.com/about" />
-
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Cognora Technologies" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="About Cognora Technologies | Our Story & Leadership" />
-    <meta property="og:description"
-        content="Cognora Technologies is an innovation-driven IT partner focused on web, mobile, cloud and AI solutions." />
-    <meta property="og:url" content="https://cognoratech.com/about" />
-    <meta property="og:image" content="https://cognoratech.com/assets/images/og-banner.webp" />
-    <meta property="og:site_name" content="Cognora Technologies" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="About Cognora Technologies | Our Story & Leadership" />
-    <meta name="twitter:description"
-        content="Meet the leadership behind Cognora Technologies and our mission to engineer digital solutions." />
-    <meta name="twitter:image" content="https://cognoratech.com/assets/images/og-banner.webp" />
-
-    <!-- Theme -->
-    <meta name="theme-color" content="#060a14" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png" />
-
-    <!-- Performance -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Cognora Technologies",
-  "url": "https://cognoratech.com",
-  "logo": "https://cognoratech.com/assets/images/logo-nobg.png"
-}
-</script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
-        rel="stylesheet">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Outfit', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            900: '#0f172a', // Deep Slate
-                        },
-                        accent: '#06b6d4', // Cyan
-                    },
-                    boxShadow: {
-                        'glow': '0 0 20px rgba(37, 99, 235, 0.15)',
-                        'card': '0 10px 30px -5px rgba(0, 0, 0, 0.05)',
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        html,
-        body {
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-
-        /* Gradient Text */
-        .text-gradient {
-            background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Grid Pattern */
-        .bg-grid-pattern {
-            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-            background-size: 30px 30px;
-        }
-    </style>
+    <?php include 'includes/head.php'; ?>
 </head>
-
-<body
-    class="font-sans text-slate-700 antialiased bg-slate-950/5 overflow-x-hidden selection:bg-brand-600 selection:text-white">
-    <!-- Navbar -->
-    <div id="scrollProgress"
-        class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-600 to-accent z-[100] w-0 transition-all duration-200">
-    </div>
-
-   <header id="navbar"
-        class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-white/80 backdrop-blur-xl transition-all duration-500">
-        <nav class="max-w-7xl mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
-
-            <div class="flex flex-1 justify-start">
-                <a href="index.html" class="flex items-center gap-2 group">
-                    <img id="navLogo" src="assets/images/logo-nobg.png" alt="Cognora Technologies"
-                        class="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
-                </a>
-            </div>
-
-            <div class="hidden md:flex items-center gap-8">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="/about" class="nav-link">About</a>
-                <a href="/services" class="nav-link">Services</a>
-                <a href="/contact" class="nav-link">Contact</a>
-            </div>
-
-            <div class="hidden md:flex flex-1 justify-end">
-                <a href="#get-in-touch"
-                    class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800">
-                    Get a quote
-                    <span class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-                </a>
-            </div>
-
-            <button id="menuBtn"
-                class="md:hidden flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800 shadow-sm focus:outline-none relative z-[60]"
-                aria-label="Toggle menu">
-                <svg id="iconHamburger" class="w-6 h-6 absolute transition-all duration-300 opacity-100 rotate-0"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-                <svg id="iconClose" class="w-6 h-6 absolute transition-all duration-300 opacity-0 rotate-90" fill="none"
-                    stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                    </path>
-                </svg>
-            </button>
-        </nav>
-
-        <div id="mobileMenu"
-    class="fixed top-0 right-0 w-full h-screen bg-white transition-transform duration-500 ease-in-out translate-x-full md:hidden z-[55]">
-            <div class="flex flex-col items-center justify-center h-full gap-8 p-4">
-                <a href="index.html" class="mobile-link text-2xl font-semibold text-slate-900">Home</a>
-                <a href="/about" class="mobile-link text-2xl font-semibold text-slate-900">About</a>
-                <a href="/services" class="mobile-link text-2xl font-semibold text-slate-900">Services</a>
-                <a href="/contact" class="mobile-link text-2xl font-semibold text-slate-900">Contact</a>
-            </div>
-        </div>
-    </header>
+<body class="font-sans text-slate-700 antialiased bg-slate-950/5 overflow-x-hidden selection:bg-brand-600 selection:text-white">
+    <?php include 'includes/header.php'; ?>
+    <main>
 
     <!-- Hero Section -->
     <section class="relative pt-40 pb-24 overflow-hidden bg-slate-50">
@@ -251,6 +91,7 @@
 
                 <div class="lg:col-span-5 rounded-[2.5rem] overflow-hidden relative" data-aos="fade-left">
                     <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+                        width="800" height="533" loading="lazy"
                         class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-110"
                         alt="Team">
                 </div>
@@ -327,6 +168,7 @@
                         <div
                             class="relative mx-auto w-32 h-32 mb-6 overflow-hidden rounded-full ring-4 ring-slate-50 ring-offset-2">
                             <img src="/assets/images/Board Of Member/SRIDHAR SIR.png" alt="Sridhar Panigrahi"
+                                width="128" height="128" loading="lazy"
                                 class="w-full h-full object-cover grayscale transition-all duration-700 ease-out group-hover:grayscale-0 group-hover:scale-125">
                         </div>
 
@@ -355,6 +197,7 @@
                         <div
                             class="relative mx-auto w-32 h-32 mb-6 overflow-hidden rounded-full ring-4 ring-slate-50 ring-offset-2">
                             <img src="/assets/images/Board Of Member/KP_SIR Marketing.jpg" alt="Krushna Pattnaik"
+                                width="128" height="128" loading="lazy"
                                 class="w-full h-full object-cover grayscale transition-all duration-700 ease-out group-hover:grayscale-0 group-hover:scale-125">
                         </div>
 
@@ -383,6 +226,7 @@
                         <div
                             class="relative mx-auto w-32 h-32 mb-6 overflow-hidden rounded-full ring-4 ring-slate-50 ring-offset-2">
                             <img src="/assets/images/Board Of Member/Rudra_Prasad_Mahapatra.jpeg" alt="Rudra Prasad Mahapatra"
+                                width="128" height="128" loading="lazy"
                                 class="w-full h-full object-cover grayscale transition-all duration-700 ease-out group-hover:grayscale-0 group-hover:scale-125">
                         </div>
 
@@ -563,113 +407,7 @@
             </div>
         </div>
     </section>
-    <!-- footer section -->
-    <footer style="background:#060a14; border-top:1px solid rgba(255,255,255,.05)">
-        <div class="max-w-7xl mx-auto px-6 py-10 lg:py-12">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-8">
-
-                <div class="col-span-2 lg:col-span-1">
-                    <a href="#" class="inline-block mb-4 transition-transform hover:scale-105">
-                        <img src="/assets/images/logo-nobg-footer.png" alt="Cognora Logo" class="h-28 w-auto object-contain ">
-                    </a>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-5 max-w-xs">
-                        Innovating intelligence and empowering the future with scalable digital solutions.
-                    </p>
-                    <div class="flex gap-3">
-                        <a href="https://www.linkedin.com/company/cognora-technologies/"
-                            class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-brand-500/50 transition-all">
-                            <i class="fab fa-linkedin-in text-xs"></i>
-                        </a>
-                        <a href="#"
-                            class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all">
-                            <i class="fab fa-x-twitter text-xs"></i>
-                        </a>
-                        <a href="https://www.instagram.com/cognoratech"
-                            class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all">
-                            <i class="fab fa-instagram text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-span-1 lg:col-span-1">
-                    <h4 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-5 opacity-70">Company</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-slate-500 hover:text-white text-sm transition-colors">Home</a></li>
-                        <li><a href="/about" class="text-slate-500 hover:text-white text-sm transition-colors">About
-                            </a></li>
-                        <li><a href="#services"
-                                class="text-slate-500 hover:text-white text-sm transition-colors">Services</a></li>
-                        <li><a href="/privacy"
-                                class="text-slate-500 hover:text-white text-sm transition-colors">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-span-1 lg:col-span-1">
-                    <h4 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-5 opacity-70">Services
-                    </h4>
-                    <ul class="space-y-3">
-                        <li><a href="#services" class="text-slate-500 hover:text-white text-sm transition-colors">Web
-                                Dev</a></li>
-                        <li><a href="#services" class="text-slate-500 hover:text-white text-sm transition-colors">Mobile
-                                Apps</a></li>
-                        <li><a href="#services" class="text-slate-500 hover:text-white text-sm transition-colors">UI/UX
-                                Design</a></li>
-                        <li><a href="#services"
-                                class="text-slate-500 hover:text-white text-sm transition-colors">Automation</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-span-2 lg:col-span-1">
-                    <h4 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-5 opacity-70">Contact</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <div
-                                class="w-7 h-7 rounded bg-white/5 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <i class="fas fa-envelope text-slate-500 text-[10px]"></i>
-                            </div>
-                            <div class="text-sm">
-                                <a href="mailto:info@cognoratech.com"
-                                    class="text-slate-500 hover:text-slate-200 transition-colors block">info@cognoratech.com</a>
-                                <a href="mailto:marketing@cognoratech.com"
-                                    class="text-slate-500 hover:text-slate-200 transition-colors block">marketing@cognoratech.com</a>
-                            </div>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-7 h-7 rounded bg-white/5 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-phone text-slate-500 text-[10px]"></i>
-                            </div>
-                            <span class="text-slate-500 text-sm">+91 88859 37030</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="border-t border-white/5">
-            <div class="max-w-7xl mx-auto px-6 py-6">
-                <div class="flex items-center justify-center md:justify-start">
-                    <p class="text-[10px] text-slate-500 font-medium tracking-wide">
-                        &copy; <span id="year"></span>
-                        <span class="text-slate-300">Cognora Technologies Pvt. Ltd.</span>
-                        All rights reserved.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({ once: true, offset: 50 });
-        // Dynamic Year
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-
-    <script src="assets/js/main.js"></script>
-
+    </main>
+    <?php include 'includes/footer.php'; ?>
 </body>
-
-
 </html>

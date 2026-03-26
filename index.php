@@ -1,186 +1,37 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
-<head>
-    <!-- Basic Meta -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Cognora Technologies | Modern IT & SaaS Engineering Partner</title>
-
-    <meta name="description"
-        content="Cognora Technologies is an innovation-driven IT partner for web, mobile, UI/UX, automation and AI-powered solutions that help startups and enterprises scale faster." />
-
-    <link rel="canonical" href="https://cognoratech.com/" />
-
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Cognora Technologies" />
-
-    <!-- Open Graph (for LinkedIn, WhatsApp, Facebook) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Cognora Technologies | Modern IT & SaaS Engineering Partner" />
-    <meta property="og:description"
-        content="We bridge the gap between complex ideas and market-ready products with modern web, mobile and cloud solutions." />
-    <meta property="og:url" content="https://cognoratech.com/" />
-    <meta property="og:image" content="https://cognoratech.com/assets/images/og-banner.webp" />
-    <meta property="og:site_name" content="Cognora Technologies" />
-
-    <!-- Twitter (X) -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Cognora Technologies | Modern IT & SaaS Engineering Partner" />
-    <meta name="twitter:description" content="Innovation-driven IT solutions for startups and enterprises." />
-    <meta name="twitter:image" content="https://cognoratech.com/assets/images/og-banner.webp" />
-
-    <!-- Theme & Branding -->
-    <meta name="theme-color" content="#060a14" />
-
-    <!-- Favicon -->
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon" />
-
-    <!-- Performance -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
-    <!-- Structured Data (Schema.org) -->
+<?php 
+  $page_title = "Cognora Technologies | Modern IT & SaaS Engineering Partner";
+  $meta_desc = "Cognora Technologies is an innovation-driven IT partner for web, mobile, UI/UX, automation and AI-powered solutions that help startups and enterprises scale faster.";
+  $canonical_url = "https://cognoratech.com/";
+  $extra_head = '
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Cognora Technologies",
-  "url": "https://cognoratech.com",
-  "logo": "https://cognoratech.com/assets/images/logo-nobg.png",
-  "sameAs": [
-    "https://www.linkedin.com/company/cognora-technologies",
-    "https://www.instagram.com/cognoratech"
-  ]
-}
-</script>
-
-    <!-- Tailwind CDN (non-blocking) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap"
-        rel="stylesheet">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Outfit', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            900: '#0f172a',
-                        },
-                        accent: '#06b6d4',
-                    },
-                    boxShadow: {
-                        'glow': '0 0 20px rgba(37, 99, 235, 0.15)',
-                        'card': '0 10px 30px -5px rgba(0, 0, 0, 0.05)',
-                    },
-
-                    animation: {
-                        'scroll-mobile': 'scroll 10s linear infinite',
-                        'scroll-tablet': 'scroll 20s linear infinite',
-                        'scroll-desktop': 'scroll 30s linear infinite',
-                        'scroll-large': 'scroll 40s linear infinite',
-                    },
-
-                    keyframes: {
-                        scroll: {
-                            '0%': { transform: 'translateX(0)' },
-                            '100%': { transform: 'translateX(-50%)' },
-                        },
-                    }
-                }
-            }
-        }
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Cognora Technologies",
+      "url": "https://cognoratech.com",
+      "logo": "https://cognoratech.com/assets/images/logo-nobg.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/cognora-technologies",
+        "https://www.instagram.com/cognoratech"
+      ]
+    }
     </script>
-
     <style>
-        /* ... keep your scrollbar and gradient text CSS ... */
         .marquee-mask {
             mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
             -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
         }
     </style>
+  ';
+?>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <?php include 'includes/head.php'; ?>
 </head>
-
-<body
-    class="font-sans text-slate-700 antialiased bg-slate-950/5 overflow-x-hidden selection:bg-brand-600 selection:text-white">
-    <!-- Navbar -->
-    <div id="scrollProgress"
-        class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-600 to-accent z-[100] w-0 transition-all duration-200">
-    </div>
-
-    <header id="navbar"
-        class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-white/80 backdrop-blur-xl transition-all duration-500">
-        <nav class="max-w-7xl mx-auto flex h-24 items-center justify-between px-4 sm:px-6 lg:px-8">
-
-            <div class="flex flex-1 justify-start">
-                <a href="index.html" class="flex items-center gap-2 group">
-                    <img id="navLogo" src="assets/images/logo-nobg.png" alt="Cognora Technologies"
-                        class="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
-                </a>
-            </div>
-
-            <div class="hidden md:flex items-center gap-8">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="/about" class="nav-link">About</a>
-                <a href="/services" class="nav-link">Services</a>
-                <a href="/contact" class="nav-link">Contact</a>
-            </div>
-
-            <div class="hidden md:flex flex-1 justify-end">
-                <a href="#get-in-touch"
-                    class="inline-flex items-center gap-2 rounded-full bg-slate-900 px-6 py-2.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-slate-800">
-                    Get a quote
-                    <span class="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
-                </a>
-            </div>
-
-            <button id="menuBtn"
-                class="md:hidden flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-800 shadow-sm focus:outline-none relative z-[60]"
-                aria-label="Toggle menu">
-                <svg id="iconHamburger" class="w-6 h-6 absolute transition-all duration-300 opacity-100 rotate-0"
-                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-                <svg id="iconClose" class="w-6 h-6 absolute transition-all duration-300 opacity-0 rotate-90" fill="none"
-                    stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                    </path>
-                </svg>
-            </button>
-        </nav>
-
-        <div id="mobileMenu"
-            class="fixed top-0 right-0 w-full h-screen bg-white transition-transform duration-500 ease-in-out translate-x-full md:hidden z-[55]">
-            <div class="flex flex-col items-center justify-center h-full gap-8 p-4">
-                <a href="index.html" class="mobile-link text-2xl font-semibold text-slate-900">Home</a>
-                <a href="/about" class="mobile-link text-2xl font-semibold text-slate-900">About</a>
-                <a href="/services" class="mobile-link text-2xl font-semibold text-slate-900">Services</a>
-                <a href="/contact" class="mobile-link text-2xl font-semibold text-slate-900">Contact</a>
-            </div>
-        </div>
-    </header>
+<body class="font-sans text-slate-700 antialiased bg-slate-950/5 overflow-x-hidden selection:bg-brand-600 selection:text-white">
+    <?php include 'includes/header.php'; ?>
+    <main>
 
     <!-- Hero Section -->
     <section id="home" class="relative overflow-hidden bg-slate-50 pt-28 pb-20 sm:pt-32 sm:pb-32">
@@ -406,7 +257,7 @@
                     OUR CLIENTS
                 </p>
 
-                <div class="relative w-full overflow-hidden">
+                <div class="relative w-full overflow-hidden marquee-mask">
 
                     <!-- Marquee -->
                     <div class="flex items-center 
@@ -421,32 +272,32 @@
                         <div class="flex items-center">
                             <div
                                 class="w-[160px] sm:w-[200px] md:w-[230px] lg:w-[260px] xl:w-[280px] flex-shrink-0 px-6 sm:px-8 md:px-10 lg:px-12 transition-all duration-300 hover:scale-110 cursor-pointer">
-                                <img src="assets/images/clients/client1.png"
+                                <img src="assets/images/clients/client1.png" width="160" height="64" loading="lazy"
                                     class="h-14 sm:h-16 md:h-20 lg:h-24 w-auto object-contain block mx-auto">
                             </div>
                             <div
                                 class="w-[160px] sm:w-[200px] md:w-[230px] lg:w-[260px] xl:w-[280px] flex-shrink-0 px-6 sm:px-8 md:px-10 lg:px-12 transition-all duration-300 hover:scale-110 cursor-pointer">
-                                <img src="assets/images/clients/client2.png"
+                                <img src="assets/images/clients/client2.png" width="160" height="64" loading="lazy"
                                     class="h-14 sm:h-16 md:h-20 lg:h-24 w-auto object-contain block mx-auto">
                             </div>
                             <div
                                 class="w-[160px] sm:w-[200px] md:w-[230px] lg:w-[260px] xl:w-[280px] flex-shrink-0 px-6 sm:px-8 md:px-10 lg:px-12 transition-all duration-300 hover:scale-110 cursor-pointer">
-                                <img src="assets/images/clients/client3.png"
+                                <img src="assets/images/clients/client3.png" width="160" height="64" loading="lazy"
                                     class="h-14 sm:h-16 md:h-20 lg:h-24 w-auto object-contain block mx-auto">
                             </div>
                             <div
                                 class="w-[160px] sm:w-[200px] md:w-[230px] lg:w-[260px] xl:w-[280px] flex-shrink-0 px-6 sm:px-8 md:px-10 lg:px-12 transition-all duration-300 hover:scale-110 cursor-pointer">
-                                <img src="assets/images/clients/client4.png"
+                                <img src="assets/images/clients/client4.png" width="160" height="64" loading="lazy"
                                     class="h-14 sm:h-16 md:h-20 lg:h-24 w-auto object-contain block mx-auto">
                             </div>
                             <div
                                 class="w-[160px] sm:w-[200px] md:w-[230px] lg:w-[260px] xl:w-[280px] flex-shrink-0 px-6 sm:px-8 md:px-10 lg:px-12 transition-all duration-300 hover:scale-110 cursor-pointer">
-                                <img src="assets/images/clients/client5.png"
+                                <img src="assets/images/clients/client5.png" width="160" height="64" loading="lazy"
                                     class="h-14 sm:h-16 md:h-20 lg:h-24 w-auto object-contain block mx-auto">
                             </div>
                             <div
                                 class="w-[160px] sm:w-[200px] md:w-[230px] lg:w-[260px] xl:w-[280px] flex-shrink-0 px-6 sm:px-8 md:px-10 lg:px-12 transition-all duration-300 hover:scale-110 cursor-pointer">
-                                <img src="assets/images/clients/client6.png"
+                                <img src="assets/images/clients/client6.png" width="160" height="64" loading="lazy"
                                     class="h-14 sm:h-16 md:h-20 lg:h-24 w-auto object-contain block mx-auto">
                             </div>
                         </div>
@@ -722,7 +573,7 @@
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
             <div class="relative order-2 lg:order-1" data-aos="fade-right">
                 <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Meeting" class="rounded-2xl shadow-2xl">
+                    alt="Meeting" width="800" height="533" loading="lazy" class="rounded-2xl shadow-2xl">
                 <div class="absolute -bottom-10 -right-10 w-48 h-48 bg-brand-50 rounded-full -z-10"></div>
             </div>
 
@@ -1105,145 +956,8 @@
             </div>
         </div>
     </div>
-</div>
-    <!-- newsletter -->
-    <section class="py-12 bg-gradient-to-br from-[#27bcce] to-[#032f7a] relative overflow-hidden">
-        <div class="absolute inset-0 bg-grid-pattern opacity-20"></div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div class="text-center md:text-left text-white">
-                <h3 class="text-2xl font-heading font-bold mb-2">Join our newsletter</h3>
-                <p class="text-brand-50 text-sm opacity-90">Get the latest insights on tech and growth. No spam, ever.
-                </p>
-            </div>
-
-            <form action="https://api.web3forms.com/submit" method="POST" id="newsletter-form"
-                class="flex w-full max-w-md gap-2">
-                <input type="hidden" name="access_key" value="76db3594-910a-49b3-ba56-78b3060cb5f2">
-
-                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                <input type="email" name="email" placeholder="Enter your email" required
-                    class="w-full px-5 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:bg-white/20 transition-all backdrop-blur-sm">
-
-                <button type="submit"
-                    class="px-6 py-3 bg-white text-brand-700 font-bold rounded-lg hover:bg-brand-50 transition-colors shadow-lg">
-                    Subscribe
-                </button>
-            </form>
-
-            <div id="result" class="hidden text-white font-medium mt-4 md:mt-0"></div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer style="background:#060a14; border-top:1px solid rgba(255,255,255,.05)">
-        <div class="max-w-7xl mx-auto px-6 py-10 lg:py-12">
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-8">
-
-                <div class="col-span-2 lg:col-span-1">
-                    <a href="#" class="inline-block mb-4 transition-transform hover:scale-105">
-                        <img src="/assets/images/logo-nobg-footer.png" alt="Cognora Logo"
-                            class="h-28 w-auto object-contain">
-                    </a>
-                    <p class="text-slate-500 text-sm leading-relaxed mb-5 max-w-xs">
-                        Innovating intelligence and empowering the future with scalable digital solutions.
-                    </p>
-                    <div class="flex gap-3">
-                        <a href="https://www.linkedin.com/company/cognora-technologies/"
-                            class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-brand-500/50 transition-all">
-                            <i class="fab fa-linkedin-in text-xs"></i>
-                        </a>
-                        <a href="#"
-                            class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all">
-                            <i class="fab fa-x-twitter text-xs"></i>
-                        </a>
-                        <a href="https://www.instagram.com/cognoratech"
-                            class="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-all">
-                            <i class="fab fa-instagram text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-span-1 lg:col-span-1">
-                    <h4 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-5 opacity-70">Company</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-slate-500 hover:text-white text-sm transition-colors">Home</a></li>
-                        <li><a href="/about" class="text-slate-500 hover:text-white text-sm transition-colors">About
-                                Us</a></li>
-                        <li><a href="#services"
-                                class="text-slate-500 hover:text-white text-sm transition-colors">Services</a></li>
-                        <li><a href="/privacy" class="text-slate-500 hover:text-white text-sm transition-colors">Privacy
-                                Policy</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-span-1 lg:col-span-1">
-                    <h4 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-5 opacity-70">Services
-                    </h4>
-                    <ul class="space-y-3">
-                        <li><a href="#services" class="text-slate-500 hover:text-white text-sm transition-colors">Web
-                                Dev</a></li>
-                        <li><a href="#services" class="text-slate-500 hover:text-white text-sm transition-colors">Mobile
-                                Apps</a></li>
-                        <li><a href="#services" class="text-slate-500 hover:text-white text-sm transition-colors">UI/UX
-                                Design</a></li>
-                        <li><a href="#services"
-                                class="text-slate-500 hover:text-white text-sm transition-colors">Automation</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-span-2 lg:col-span-1">
-                    <h4 class="text-white font-bold text-[10px] uppercase tracking-[0.2em] mb-5 opacity-70">Contact</h4>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <div
-                                class="w-7 h-7 rounded bg-white/5 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <i class="fas fa-envelope text-slate-500 text-[10px]"></i>
-                            </div>
-                            <div class="text-sm">
-                                <a href="mailto:info@cognoratech.com"
-                                    class="text-slate-500 hover:text-slate-200 transition-colors block">info@cognoratech.com</a>
-                                <a href="mailto:marketing@cognoratech.com"
-                                    class="text-slate-500 hover:text-slate-200 transition-colors block">marketing@cognoratech.com</a>
-                            </div>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <div class="w-7 h-7 rounded bg-white/5 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-phone text-slate-500 text-[10px]"></i>
-                            </div>
-                            <span class="text-slate-500 text-sm">+91 88859 37030</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="border-t border-white/5">
-            <div class="max-w-7xl mx-auto px-6 py-6">
-                <div class="flex items-center justify-center md:justify-start">
-                    <p class="text-[10px] text-slate-500 font-medium tracking-wide">
-                        &copy; <span id="year"></span>
-                        <span class="text-slate-300">Cognora Technologies Pvt. Ltd.</span>
-                        All rights reserved.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-
-
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ once: true, offset: 50, duration: 800 });
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-    <script src="assets/js/main.js"></script>
+    <?php include 'includes/newsletter.php'; ?>
+    </main>
+    <?php include 'includes/footer.php'; ?>
 </body>
-
 </html>
